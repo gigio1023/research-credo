@@ -10,15 +10,27 @@ Existing skills already port the strategy half of the essay (taste, novelty, kil
 
 ## Skills
 
+Two kinds of skill live here. Judgment skills carry the credo and are advisory: they reason in prose and hand the decision back. Checklist skills are procedural: they run at a fixed moment (a release, a new system) and either produce machine evidence or put each item in front of the author to confirm. Keeping the two apart is deliberate; a checklist should not argue, and a judgment skill should not pretend to be exhaustive.
+
+### Judgment
+
 | Skill | Use it when | Result |
 | --- | --- | --- |
 | [research-credo](skills/research-credo/SKILL.md) | Deciding what to work on, ranking directions, checking a plan against the principles | Verdict in prose, the tenets applied, one next action |
 | [conclusion-first](skills/conclusion-first/SKILL.md) | Before starting a project, or when one stalls | Best-case conclusion, riskiest sub-problem, continue / kill / pivot / de-risk verdict |
-| [ideas-log](skills/ideas-log/SKILL.md) | An idea shows up mid-task, or it is time to pick the next project | Appended entry in a write-mostly log; dated review pass when choosing |
-| [threat-list](skills/threat-list/SKILL.md) | A new dataset, model, API, agent, or pipeline appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
 | [reading-modes](skills/reading-modes/SKILL.md) | A paper or preprint lands | Scan, extract, or reproduce output, and the conventions the paper inherits without argument |
 | [writing-pass](skills/writing-pass/SKILL.md) | Revising an abstract, introduction, figure, conclusion, or full draft | Revised text tied to the writing rules, read-aloud pass, timeboxed |
-| [paper-release-checklist](skills/paper-release-checklist/SKILL.md) | Submitting, uploading to arXiv, or sending a camera-ready | Mechanical checks with file:line evidence, then the manual list for that release type |
+
+### Checklists
+
+| Skill | Use it when | Result |
+| --- | --- | --- |
+| [ideas-log](skills/ideas-log/SKILL.md) | An idea shows up mid-task, or it is time to pick the next project | Appended entry in a write-mostly log; dated review pass when choosing |
+| [threat-list](skills/threat-list/SKILL.md) | A new dataset, model, API, agent, or pipeline appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
+| [latex-release-lint](skills/latex-release-lint/SKILL.md) | The LaTeX sources are final enough to check | Script findings with `file:line` evidence for everything a program can catch |
+| [paper-release-checklist](skills/paper-release-checklist/SKILL.md) | Submitting, uploading to arXiv, or sending a camera-ready | The human items, one at a time, each confirmed by the author |
+
+Carlini's release checklist is split across the last two rows on purpose: [coverage.md](skills/latex-release-lint/references/coverage.md) records which of his items a program checks and which still need eyes, a PDF, or the call for papers.
 
 The principles themselves live in [skills/research-credo/references/tenets.md](skills/research-credo/references/tenets.md).
 
@@ -40,10 +52,10 @@ for s in skills/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"
 
 Project scope works the same way with `.claude/skills/` or `.agents/skills/` inside a repository. Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. Harness-specific extras (plugin manifests, `agents/openai.yaml`) are not included yet.
 
-The release checklist script needs Python 3.10 or newer and no third-party packages:
+The lint script needs Python 3.10 or newer and no third-party packages:
 
 ```bash
-python3 skills/paper-release-checklist/scripts/check_tex.py path/to/main.tex
+python3 skills/latex-release-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
 ```
 
 ## Attribution and license

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Mechanical pre-release checks for a LaTeX paper.
 
-Follows \\input and \\include from the root file, strips comments, and reports
-findings as ``severity<TAB>file:line<TAB>message``. Exit code 1 when any
+Follows \\input and \\include from the root file, strips comments, optionally
+scans a build log, and reports findings as ``severity<TAB>file:line<TAB>message``. Exit code 1 when any
 error was found, 0 otherwise, 2 on bad usage. Python 3.10+, standard library only.
 """
 from __future__ import annotations
@@ -20,6 +20,8 @@ INPUT = re.compile(r"\\(?:input|include)\{([^}]+)\}")
 TITLE = re.compile(r"\\title(?:\[[^\]]*\])?\{(.*?)\}", re.S)
 ABSTRACT = re.compile(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", re.S)
 DOUBLE_DOT = re.compile(r"(?<!\.)\.\.(?!\.)")
+LOG_WORDS = re.compile(r"\b(error|warning|undefined|missing)\b", re.I)
+ACK = re.compile(r"acknowledg", re.I)
 
 
 def strip_comment(line: str) -> str:
@@ -73,6 +75,9 @@ def check(root: Path, blind: bool, authors: list[str]) -> tuple[list[tuple[str, 
             if CONFLICT.match(line):
                 findings.append(("error", f"{rel}:{n}", "merge-conflict marker"))
             code = strip_comment(line)
+            comment = line[len(code):]
+            if ACK.search(comment) and re.search(r"\\(section\*?|paragraph|begin)", comment):
+                findings.append(("warning", f"{rel}:{n}", "acknowledgments section appears commented out"))
             if not code.strip():
                 continue
             if TODO.search(code):
@@ -94,11 +99,23 @@ def check(root: Path, blind: bool, authors: list[str]) -> tuple[list[tuple[str, 
     return findings, title, abstract
 
 
+def scan_log(log: Path) -> list[tuple[str, str, str]]:
+    """Report build-log lines containing error, warning, undefined, or missing."""
+    out: list[tuple[str, str, str]] = []
+    for n, line in enumerate(log.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+        words = {w.lower() for w in LOG_WORDS.findall(line)}
+        if words:
+            sev = "error" if words & {"error", "undefined"} else "warning"
+            out.append((sev, f"{log}:{n}", f"build log: {line.strip()[:160]}"))
+    return out
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Mechanical pre-release checks for a LaTeX paper.")
     ap.add_argument("root", help="root .tex file")
     ap.add_argument("--blind", action="store_true", help="fail if any --author name appears in the text")
     ap.add_argument("--author", action="append", default=[], help="author name to search for with --blind (repeatable)")
+    ap.add_argument("--log", help="LaTeX build log to scan for error/warning/undefined/missing")
     args = ap.parse_args(argv)
     root = Path(args.root)
     if not root.is_file():
@@ -108,6 +125,12 @@ def main(argv: list[str] | None = None) -> int:
         print("usage error: --blind needs at least one --author", file=sys.stderr)
         return 2
     findings, title, abstract = check(root, args.blind, args.author)
+    if args.log:
+        log = Path(args.log)
+        if not log.is_file():
+            print(f"usage error: {log} is not a file", file=sys.stderr)
+            return 2
+        findings.extend(scan_log(log))
     print(f"info\t{root}\ttitle: {title or '(no \\title found)'}")
     if abstract:
         macros = re.findall(r"\\[A-Za-z]+", abstract)

@@ -1,33 +1,28 @@
 ---
 name: paper-release-checklist
-description: "Run the pre-release checklist on a LaTeX paper before a conference submission, camera-ready, or arXiv upload: title, TODO and FIXME notes, merge-conflict markers, doubled words, unresolved references, captions, anonymity, page and formatting rules, author names, copyright block, abstract macros. Use when the user says 'submit', 'upload to arXiv', 'camera-ready', or 'final check on the paper'. NOT for content review (writing-pass) or fixing bibliography formatting."
+description: "Walk the author through the human checks before a conference submission, camera-ready, or arXiv upload: title correct, PDF renders on another machine, no orphan lines, captions readable alone, page limit and numbering per the call for papers, anonymity, author names and affiliations, copyright block, template version, acknowledgments, arXiv form fields. Every item is confirmed by the author, not inferred by the agent. Use when the user says 'submit', 'camera-ready', 'arXiv upload', or 'final check'. NOT for the mechanical source checks (latex-release-lint runs those first) or for content and prose review (writing-pass)."
 ---
 
 # Paper Release Checklist
 
-Outcome: a pass/fail table for the release type at hand, every mechanical item backed by a script finding or a quoted line, every manual item marked done by the user or left open, and no item marked passed without evidence. The paper is not edited unless the user asks.
+Outcome: for the release type at hand, every manual item has been put in front of the author and recorded as confirmed, open, or not applicable, with the machine-checkable items already covered by latex-release-lint evidence. Nothing is ticked on the author's behalf.
 
-The list is adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html), whose rule is that each embarrassing mistake gets added to the list so it is made only once. When the user reports a new mistake, add it to [references/checklist.md](references/checklist.md) with a date.
+The list is adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html). His rule is that each embarrassing mistake, once made, is added to the list so it happens only once. Items that a program can check were moved to latex-release-lint; the items here are the ones that need a person, a rendered PDF, the build, or the call for papers. The manual items live in [references/checklist.md](references/checklist.md).
 
 ## Steps
 
-1. Identify the release type: conference submission, public release (camera-ready), or arXiv upload. Each adds a section of the manual list.
-2. Run the mechanical checks from the directory containing this SKILL.md:
-
-   ```bash
-   python3 scripts/check_tex.py path/to/main.tex
-   python3 scripts/check_tex.py path/to/main.tex --blind --author "Full Name" --author "Coauthor Name"
-   ```
-
-   The script follows `\input` and `\include`, strips comments, and reports `error`, `warning`, and `info` lines as `severity  file:line  message`. It needs Python 3.10 or newer and no packages. Exit code 1 means at least one error. If Python is unavailable, run the equivalent greps by hand and say so.
-3. Walk the manual items for the release type in [references/checklist.md](references/checklist.md). Items that need the rendered PDF (orphan lines, fonts, figure legibility, page count against the limit) require the user to open the PDF; ask them and record their answer.
-4. Report.
+1. Identify the release type: conference submission, public release (camera-ready), or arXiv upload. Each adds a section of the list.
+2. Get the machine evidence first. If the LaTeX sources are available, have latex-release-lint run and attach its error and warning lines; do not repeat those checks by eye. If sources are not available, note that the mechanical items are unverified.
+3. Walk the manual items for "every release" and for the release type, one at a time. For each item state what the author should look at (which page, which form field, which file), then record their answer. Items that need the PDF require the author to open it; do not infer layout from the source.
+4. Record. An item is "confirmed" only when the author said so, "open" when they have not checked it or found a problem, "n/a" when the release type does not need it.
+5. When the author reports a mistake that no item would have caught, append it to [references/checklist.md](references/checklist.md) under "Added later" with the date. That is the point of the list.
 
 ## Output
 
-| Item | Result | Evidence |
+| Item | Result | Note |
 | --- | --- | --- |
-| e.g. No TODO/FIXME | fail | `error  sec/eval.tex:41  TODO marker` |
-| e.g. Title correct | pass (user confirmed) | `\title{...}` as printed by the script |
+| e.g. Page count within limit (9 + refs) | confirmed by author | 8.5 pages content |
+| e.g. Fonts render on another machine | open | not yet checked |
+| e.g. Mechanical checks | see latex-release-lint | 0 errors, 2 warnings reviewed |
 
-Errors block release; warnings need a look; info lines are for eyeballing. State plainly which manual items were not verified. Do not summarize a check as passed because the script ran; the evidence column must hold the line or the user's confirmation.
+Open items block the release. List them first. Do not rewrite the paper; if an item fails, say what to fix and let the author do it or ask for writing-pass.

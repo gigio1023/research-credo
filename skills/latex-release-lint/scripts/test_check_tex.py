@@ -46,6 +46,21 @@ def test_dirty_paper() -> None:
         assert "TODO in a comment" not in out, out
 
 
+def test_log_and_commented_ack() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        main = write(d, "main.tex", "\\title{T}\n%\\section*{Acknowledgments}\n% We thank ...\nBody.\n")
+        log = write(d, "main.log", "LaTeX Warning: Reference `fig:x' on page 2 undefined on input line 9.\n"
+                    "Package hyperref Warning: Token not allowed.\nOutput written on main.pdf.\n")
+        code, out = run(str(main), "--log", str(log))
+        assert code == 1, out
+        assert "acknowledgments section appears commented out" in out, out
+        assert out.count("build log:") == 2, out
+        assert "error\t" in out and "undefined" in out, out
+        code, _ = run(str(main), "--log", str(d / "missing.log"))
+        assert code == 2
+
+
 def test_clean_paper() -> None:
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
