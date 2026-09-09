@@ -1,35 +1,28 @@
 ---
 name: conclusion-first
-description: "Gate a research project before it starts or when it stalls by writing its best-case conclusion and deciding continue, kill, pivot, or de-risk first. Use when the user says 'should I start this', 'is this worth finishing', 'this isn't working', or presents a plan with no stated conclusion. Also names the sub-problem most likely to fail as the first experiment. NOT for polishing the conclusion section of a finished paper (writing-pass) or ranking many ideas at once (research-credo)."
+description: "Gate a long-horizon research project before it starts or when it stalls by talking through its best-case conclusion, its single idea, and the sub-problem most likely to fail, then reaching a continue, kill, pivot, or de-risk decision in the user's own words. Use when the user says 'should I start this', 'is this worth finishing', 'this isn't working', or brings a plan with no stated conclusion. NOT for near-term deliverables or tickets, for polishing a finished paper's conclusion (paper-plan), or for ranking many ideas at once (taste)."
 ---
 
 # Conclusion First
 
-Outcome: the user has a written best-case conclusion for the project, a one-sentence statement of its single idea, the riskiest sub-problem with a small first experiment, and a verdict with reasons. The verdict is prose. This skill does not compute scores; it makes the reasoning explicit so the user can disagree with it.
+Outcome: the user has said, in their own words, what the paper would conclude if everything worked, what its single idea is, which part is most likely to fail, and what they will do now. The agent asks and reflects; it does not score.
 
-Adapted from Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html): the conclusion-first test in the section on conclusions, and the sections on killing projects and starting with the part most likely to fail.
+Scope: long-horizon work only, per the repository's `AGENTS.md`. A near-term deliverable does not get this gate.
 
-## Steps
+Adapted from the essay's conclusion-first test and its sections on killing projects and starting with the part most likely to fail.
 
-1. Best-case conclusion. Ask the user to state, or draft for them, the conclusion of the paper if every experiment turned out exactly as hoped, in two to four sentences. Then test it: does it say anything beyond "our method improves the number by X"? If not, the project may be sound science but it is not the important one; say so and offer a reframing or a kill.
-2. The one idea. Write the single idea in one sentence. If it takes two sentences or an "and", the project is two projects; pick one before continuing.
-3. Riskiest sub-problem. Identify the part most likely to fail and propose the smallest prototype that would show whether it works, in days not weeks. Refuse the comfortable order. If the user has already spent weeks on the part they know how to do, name that as the first finding.
-4. Kill conditions. Check the three separately:
-   - Technical failure: the core idea does not work in the prototype.
-   - Low impact: it works, but the best-case conclusion still does not matter.
-   - Opportunity cost: something clearly more important has appeared. Apply the caution that new ideas always look better than the one you have lived with for months; ask what specifically makes the new one more important, not just newer.
-5. Verdict: continue, kill, pivot, or de-risk first. When killing, name what to salvage: a workshop paper, a blog post, or an entry in the ideas log via ideas-log.
+## The conversation
 
-## When a project is ending well
+Ask these in order, one at a time, and stop early when the answer settles the matter.
 
-Run the maximal-version check: is there an obvious experiment, domain, or critique a reader will wish had been addressed? If so it belongs in this paper. Leave the small follow-ups open on purpose; they are how others join the topic.
+1. If every experiment turned out exactly as you hope, what does the conclusion say? Wait. If the answer is a number going up, ask: what changes about how people think or build? If nothing, say plainly that this may be sound science but not the important project, and ask whether to reframe or stop.
+2. What is the one idea, in one sentence? If the sentence needs an "and", say that this is two projects and ask which one this is.
+3. Which part is most likely to fail? What is the smallest thing you could try in days that would tell you? If the user has spent weeks on the part they already knew how to do, name that as the first finding.
+4. Only when the project is already running: is the idea failing, is it working but not mattering, or has something more important appeared? For the third, add that new ideas always look better than the one you have lived with, and ask what specifically makes the new one more important.
+5. What will you do? Continue, kill, pivot, or de-risk first. If killing, what is salvaged: a workshop note, a blog post, or an entry in the taste journal.
+
+When a project is ending well, add one more question: is there an obvious experiment, domain, or objection a reader will wish you had addressed? If yes, it belongs in this paper. Small follow-ups can stay open; they are how others join.
 
 ## Output
 
-- Best-case conclusion (as written).
-- One-sentence idea.
-- Riskiest sub-problem and the first experiment, with a time estimate.
-- Verdict and the reasons, including which kill condition, if any, applies.
-- What to salvage, when killing.
-
-Advisory only. Write to project files only when the user asks, and then keep this five-part shape.
+No form. Reflect the user's answers back in one short paragraph they could paste into their notes: conclusion, idea, riskiest part, decision, and the prediction to revisit later. Offer once to record it with `taste-journal`.

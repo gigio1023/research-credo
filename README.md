@@ -1,63 +1,70 @@
 # research-credo
 
-Agent skills that turn a research credo into daily habits. The credo is adapted from Nicholas Carlini's writing on how to do research that matters, most of all [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html) (2026), plus his notes on [keeping an ideas log](https://nicholas.carlini.com/writing/2024/my-research-logfile.html), the [paper release checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html), and the problem-selection habit he described on the [Latent Space podcast](https://www.latent.space/p/carlini) (2024). This repository is not affiliated with him. Tenets are paraphrased and linked; read the originals.
+A way of thinking about research, packaged so an agent keeps it in the room during long-horizon work. The credo is adapted from Nicholas Carlini's essay [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html) (2026), his [ideas log](https://nicholas.carlini.com/writing/2024/my-research-logfile.html), and the problem-selection habit he described on the [Latent Space podcast](https://www.latent.space/p/carlini) (2024). Not affiliated with him; tenets are paraphrased and linked. Read the originals.
 
-Status: draft v0. The tenets carry a `stance` column (adopted / adapted / open) so the owner can record which principles they actually hold. Several are still marked `open`.
+Status: draft v0. License not yet chosen.
 
-## Why another skill set
+## What this is, and is not
 
-Existing skills already port the strategy half of the essay (taste, novelty, kill early, conclusion first), notably [andrehuang/research-companion](https://github.com/andrehuang/research-companion), [moralespanitz/carlini-dm](https://github.com/moralespanitz/carlini-dm), and [moralespanitz/research-loop](https://github.com/moralespanitz/research-loop). What they leave out is the habit layer: the append-only ideas log, the fixed threat checklist run against every new system, the three reading modes, the release checklist, the read-aloud pass, and the portfolio view (one or two potentially great papers a year; the award is a sample, you own the distribution). This repository puts the credo in one place and builds the habits as separate, small skills.
+The essay's content is not a checklist. It is a set of questions Carlini asks himself at particular moments (what makes me want to shout, how many months ahead am I, what would the conclusion say if everything worked, who is the reader and what do they believe) and the episodes in which those questions paid off. This repository carries the questions and the episodes, and the one habit the essay says builds taste: writing predictions down and comparing them with what happened.
 
-## Skills
+It applies to long-horizon work only. A research direction, a paper, a multi-month improvement of a system you own: yes. A ticket, a bug, a customer deadline, this week's task: no. The scope test is in [AGENTS.md](AGENTS.md); the agent asks which kind of work it is before applying anything here.
 
-Two kinds of skill live here. Judgment skills carry the credo and are advisory: they reason in prose and hand the decision back. Checklist skills are procedural: they run at a fixed moment (a release, a new system) and either produce machine evidence or put each item in front of the author to confirm. Keeping the two apart is deliberate; a checklist should not argue, and a judgment skill should not pretend to be exhaustive.
+Existing skills such as [research-companion](https://github.com/andrehuang/research-companion), [carlini-dm](https://github.com/moralespanitz/carlini-dm), and [research-loop](https://github.com/moralespanitz/research-loop) already turn the essay's strategy into evaluation pipelines and scorecards. This repository goes the other way: no scores, one question at a time, and a journal that closes the loop.
 
-### Judgment
+## Three layers
 
-| Skill | Use it when | Result |
+1. Always on. [AGENTS.md](AGENTS.md) holds the scope test and five stances the agent keeps in every long-horizon conversation. Copy its credo section into your project's `AGENTS.md`; [CLAUDE.md](CLAUDE.md) points Claude Code at it. Skills fire only when triggered; this layer is what makes the thinking continuous.
+2. Thinking skills. Dialogue-first, no forms, ending when you can state your own judgment.
+3. The record. A journal of ideas, predictions, and hindsight, plus a monthly review of the portfolio.
+
+### Thinking skills
+
+| Skill | Moment | What you leave with |
 | --- | --- | --- |
-| [research-credo](skills/research-credo/SKILL.md) | Deciding what to work on, ranking directions, checking a plan against the principles | Verdict in prose, the tenets applied, one next action |
-| [conclusion-first](skills/conclusion-first/SKILL.md) | Before starting a project, or when one stalls | Best-case conclusion, riskiest sub-problem, continue / kill / pivot / de-risk verdict |
-| [reading-modes](skills/reading-modes/SKILL.md) | A paper or preprint lands | Scan, extract, or reproduce output, and the conventions the paper inherits without argument |
-| [writing-pass](skills/writing-pass/SKILL.md) | Revising an abstract, introduction, figure, conclusion, or full draft | Revised text tied to the writing rules, read-aloud pass, timeboxed |
+| [taste](skills/taste/SKILL.md) | Choosing a direction, weighing an idea, stuck mid-project | Your own stated judgment, reached through his questions and his episodes as analogies |
+| [conclusion-first](skills/conclusion-first/SKILL.md) | Starting or continuing one project | The best-case conclusion, the one idea, the riskiest part, and a continue / kill / pivot / de-risk decision |
+| [paper-plan](skills/paper-plan/SKILL.md) | About to write a paper or section | A seven-part plan (idea, reader, conclusion, story arc, figures, section order with reasons, abstract shape); you draft, the agent critiques |
+| [read-then-forget](skills/read-then-forget/SKILL.md) | A paper landed | Scan, extract, or reproduce, then what the paper inherits unexamined and what you would do without it |
+| [taste-journal](skills/taste-journal/SKILL.md) | An idea appears, a decision is made, a result arrives | An appended idea, prediction, or hindsight entry; predictions read back when outcomes come |
+| [distribution-review](skills/distribution-review/SKILL.md) | Monthly | Which one or two efforts could be great, what dies, months-ahead guesses, rejections read as samples |
 
-### Checklists
+The tenets with the owner's stance on each are in [skills/taste/references/tenets.md](skills/taste/references/tenets.md); the episodes used as analogies are in [skills/taste/references/episodes.md](skills/taste/references/episodes.md).
 
-| Skill | Use it when | Result |
+### Habits (not the credo)
+
+Fixed procedures that run at a moment, kept apart from the thinking skills so a checklist never pretends to be judgment.
+
+| Habit | Moment | Result |
 | --- | --- | --- |
-| [ideas-log](skills/ideas-log/SKILL.md) | An idea shows up mid-task, or it is time to pick the next project | Appended entry in a write-mostly log; dated review pass when choosing |
-| [threat-list](skills/threat-list/SKILL.md) | A new dataset, model, API, agent, or pipeline appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
-| [latex-release-lint](skills/latex-release-lint/SKILL.md) | The LaTeX sources are final enough to check | Script findings with `file:line` evidence for everything a program can catch |
-| [paper-release-checklist](skills/paper-release-checklist/SKILL.md) | Submitting, uploading to arXiv, or sending a camera-ready | The human items, one at a time, each confirmed by the author |
-
-Carlini's release checklist is split across the last two rows on purpose: [coverage.md](skills/latex-release-lint/references/coverage.md) records which of his items a program checks and which still need eyes, a PDF, or the call for papers.
-
-The principles themselves live in [skills/research-credo/references/tenets.md](skills/research-credo/references/tenets.md).
+| [threat-list](habits/threat-list/SKILL.md) | A new dataset, model, API, or agent appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
+| [latex-release-lint](habits/latex-release-lint/SKILL.md) | LaTeX sources are near final | Script findings with `file:line` for everything a program can catch; see [coverage.md](habits/latex-release-lint/references/coverage.md) |
+| [paper-release-checklist](habits/paper-release-checklist/SKILL.md) | Submitting, camera-ready, arXiv | The human items, one at a time, each confirmed by the author |
 
 ## Install
 
-Each skill is a self-contained directory with a `SKILL.md`. Link or copy the ones you want into your harness's skill directory.
+Always-on layer: copy the credo section of [AGENTS.md](AGENTS.md) into your research project's `AGENTS.md` (Codex and other harnesses that read it) and add a pointer in `CLAUDE.md` (Claude Code), as this repository does.
+
+Skills and habits are self-contained directories with a `SKILL.md`. Link the ones you want into your harness's skill directory.
 
 Claude Code (user scope):
 
 ```bash
-for s in skills/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done
+for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done
 ```
 
 Codex (user scope):
 
 ```bash
-for s in skills/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done
+for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done
 ```
 
-Project scope works the same way with `.claude/skills/` or `.agents/skills/` inside a repository. Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. Harness-specific extras (plugin manifests, `agents/openai.yaml`) are not included yet.
-
-The lint script needs Python 3.10 or newer and no third-party packages:
+Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. The lint script needs Python 3.10 or newer and no packages:
 
 ```bash
-python3 skills/latex-release-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
+python3 habits/latex-release-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
 ```
 
 ## Attribution and license
 
-Tenets are short paraphrases with links to the source posts; quotations are kept brief. The skills' wording, structure, and scripts are original to this repository. License: not yet chosen.
+Tenets and episodes are short paraphrases with links to the sources; quotations are kept brief. The skills' wording, structure, and scripts are original to this repository. License: not yet chosen.

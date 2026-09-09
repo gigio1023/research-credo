@@ -1,6 +1,6 @@
 ---
 name: latex-release-lint
-description: "Run the mechanical pre-release checks on LaTeX sources with a bundled script: TODO and FIXME markers, author note macros, merge-conflict markers, doubled words, '..' and '??' remnants, author names under blind review, LaTeX macros in the abstract, commented-out acknowledgments, and error/warning/undefined/missing lines in the build log. Use when the user asks to lint the paper source, check the tex before submitting, or when paper-release-checklist needs machine evidence. Reports file:line findings and edits nothing. NOT for the author's walkthrough of a release (paper-release-checklist) or for prose and argument review (writing-pass)."
+description: "Run the mechanical pre-release checks on LaTeX sources with a bundled script: TODO and FIXME markers, author note macros, merge-conflict markers, doubled words, '..' and '??' remnants, author names under blind review, LaTeX macros in the abstract, commented-out acknowledgments, and error/warning/undefined/missing lines in the build log. Use when the user asks to lint the paper source, check the tex before submitting, or when paper-release-checklist needs machine evidence. Reports file:line findings and edits nothing. NOT for the author's walkthrough of a release (paper-release-checklist) or for content and structure review (paper-plan)."
 ---
 
 # LaTeX Release Lint

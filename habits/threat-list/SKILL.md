@@ -36,7 +36,7 @@ Rules:
 ## Output
 
 1. The table, all items.
-2. At most two leads, each with the one observation that makes it practical and the first cheap experiment that would confirm or kill it. Hand a lead to conclusion-first if the user wants to pursue it.
+2. At most two leads, each with the one observation that makes it practical and the first cheap experiment that would confirm or kill it. Hand a lead to the `conclusion-first` skill if the user wants to pursue it.
 3. If nothing applies, say so in one sentence. Do not manufacture a lead.
 4. A disclosure note when a lead is real: is the flaw patchable by the system owner or not, since that decides how quickly it should be reported and published.
 

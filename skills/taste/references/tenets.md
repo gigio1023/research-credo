@@ -1,5 +1,7 @@
 # Tenets
 
+Scope: these apply to long-horizon work only, as the repository `AGENTS.md` defines it. They are not a standard for near-term deliverables.
+
 Paraphrased from Nicholas Carlini's writing, mainly [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html) (2026-03-09). Section names in parentheses point to that post unless another source is given. Read the originals; these lines are pointers, not replacements. The `stance` column records the owner's position: `adopted` means held as written, `adapted` means held with a change noted here, `open` means undecided.
 
 ## Contents
@@ -21,7 +23,7 @@ Paraphrased from Nicholas Carlini's writing, mainly [How to win a best paper awa
 | T4 | Do not start research with the goal of a conference paper. Aim to find something important and new; the paper follows. One or two projects a year may be great; the rest are practice, and practice is how the great ones are found. | Pick your ideas for impact | adopted |
 | T5 | The size of a contribution is the number of months between your result and when the next person would have found it. Aim for problems that would have taken others months, and notice where reading the literature makes you want to shout that everyone is doing it wrong. | Do something only you can do | adopted |
 | T6 | Impact is your skill in an area multiplied by how much the area matters right now. Find the corner of the field where you are strongest, name your comparative advantage, and be honest when the world has moved past what you are best at. | Find your comparative advantage; Get lucky: well suited | adapted: the owner names their own comparative advantage in this file when known |
-| T7 | Keep a fixed list of ways a system can fail (evasion at inference time, data poisoning, model extraction, training-data extraction, and the rest) and run the whole list against every new system, dataset, or API. Most runs find nothing. That is the cost of finding the ones that matter. | [Latent Space interview](https://www.latent.space/p/carlini), problem-selection segment around 00:53 | adopted; list maintained in the threat-list skill |
+| T7 | Keep a fixed list of ways a system can fail (evasion at inference time, data poisoning, model extraction, training-data extraction, and the rest) and run the whole list against every new system, dataset, or API. Most runs find nothing. That is the cost of finding the ones that matter. | [Latent Space interview](https://www.latent.space/p/carlini), problem-selection segment around 00:53 | adopted; list maintained in the `threat-list` habit under `habits/` |
 
 ## Executing
 

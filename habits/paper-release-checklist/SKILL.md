@@ -1,6 +1,6 @@
 ---
 name: paper-release-checklist
-description: "Walk the author through the human checks before a conference submission, camera-ready, or arXiv upload: title correct, PDF renders on another machine, no orphan lines, captions readable alone, page limit and numbering per the call for papers, anonymity, author names and affiliations, copyright block, template version, acknowledgments, arXiv form fields. Every item is confirmed by the author, not inferred by the agent. Use when the user says 'submit', 'camera-ready', 'arXiv upload', or 'final check'. NOT for the mechanical source checks (latex-release-lint runs those first) or for content and prose review (writing-pass)."
+description: "Walk the author through the human checks before a conference submission, camera-ready, or arXiv upload: title correct, PDF renders on another machine, no orphan lines, captions readable alone, page limit and numbering per the call for papers, anonymity, author names and affiliations, copyright block, template version, acknowledgments, arXiv form fields. Every item is confirmed by the author, not inferred by the agent. Use when the user says 'submit', 'camera-ready', 'arXiv upload', or 'final check'. NOT for the mechanical source checks (latex-release-lint runs those first) or for content and prose review (paper-plan)."
 ---
 
 # Paper Release Checklist
@@ -25,4 +25,4 @@ The list is adapted from Carlini's [Research Paper Release Checklist](https://ni
 | e.g. Fonts render on another machine | open | not yet checked |
 | e.g. Mechanical checks | see latex-release-lint | 0 errors, 2 warnings reviewed |
 
-Open items block the release. List them first. Do not rewrite the paper; if an item fails, say what to fix and let the author do it or ask for writing-pass.
+Open items block the release. List them first. Do not rewrite the paper; if an item fails, say what to fix and let the author do it or ask for paper-plan.
