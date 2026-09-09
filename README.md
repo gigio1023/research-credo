@@ -43,26 +43,83 @@ Fixed procedures that run at a moment, kept apart from the thinking skills so a 
 
 ## Install
 
-Always-on layer: copy the credo section of [AGENTS.md](AGENTS.md) into your research project's `AGENTS.md` (Codex and other harnesses that read it) and add a pointer in `CLAUDE.md` (Claude Code), as this repository does.
+Two things get installed: the skills (six thinking skills, three habits) and the always-on layer (a section of `AGENTS.md` copied into your project). The CLI handles the first; the second is a copy you make once per project.
 
-Skills and habits are self-contained directories with a `SKILL.md`. Link the ones you want into your harness's skill directory.
+### With `npx skills` (preferred)
 
-Claude Code (user scope):
-
-```bash
-for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done
-```
-
-Codex (user scope):
+Prerequisite: Node.js 18 or newer. Browse the pack first:
 
 ```bash
-for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done
+npx --yes skills add 'gigio1023/research-credo#main' --list --full-depth
 ```
+
+Install the six thinking skills globally for the agents you use. Pass an explicit `--agent` list; the CLI otherwise installs for whatever agent it detects.
+
+```bash
+npx --yes skills add 'gigio1023/research-credo#main' \
+  --skill taste conclusion-first paper-plan read-then-forget taste-journal distribution-review \
+  --agent claude-code codex \
+  --global \
+  --yes
+```
+
+The habits live under `habits/`, which the CLI scans only with `--full-depth`. Add the ones you want:
+
+```bash
+npx --yes skills add 'gigio1023/research-credo#main' --full-depth \
+  --skill threat-list latex-release-lint paper-release-checklist \
+  --agent claude-code codex \
+  --global \
+  --yes
+```
+
+Drop the trailing `--yes` to review the overwrite summary when a global skill of the same name already exists. Omit `--global` for a project-local install. Verify and update later with:
+
+```bash
+npx --yes skills list --global
+npx --yes skills update --global
+```
+
+Installing from the GitHub source records the origin, so `update` picks up later releases. Installing from a local checkout does not; rerun `add` instead.
+
+### By asking your agent
+
+Paste this into Claude Code, Codex, or another agent that can run shell commands. If the agent has [install-skill-pack](https://github.com/gigio1023/agent-skills) available, it will review each package before installing.
+
+```text
+Install the research-credo skills from https://github.com/gigio1023/research-credo
+with `npx skills`, global scope, for the agents I use here: the six skills under
+skills/ and, using --full-depth, the three habits under habits/. Then copy the
+"Research credo" section of that repository's AGENTS.md into this project's
+AGENTS.md and add a one-line pointer to it in CLAUDE.md. Show me `npx skills list
+--global` when done.
+```
+
+### Manually
+
+Each skill and habit is a self-contained directory with a `SKILL.md`. From a checkout, link the ones you want into your harness's skill directory:
+
+```bash
+for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done   # Claude Code
+for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done   # Codex
+```
+
+### Wire the always-on layer
+
+Whichever way the skills were installed, copy the credo section of [AGENTS.md](AGENTS.md) into your research project's `AGENTS.md` (Codex and other harnesses that read it) and add a pointer in `CLAUDE.md` (Claude Code), as this repository does. Without this step the skills fire only when triggered, and nothing keeps the credo in the room between calls.
 
 Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. The lint script needs Python 3.10 or newer and no packages:
 
 ```bash
 python3 habits/latex-release-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
+```
+
+## Local development
+
+Inspect a checkout without creating an update-tracked install. The listing must report nine names: six under `skills/`, three under `habits/`.
+
+```bash
+npx --yes skills add . --list --full-depth
 ```
 
 ## Attribution and license
