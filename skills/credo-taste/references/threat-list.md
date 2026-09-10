@@ -1,6 +1,10 @@
-# The list
+# Failure-mode list for a new system
 
-Ten failure modes to check against every new system. Items 1 to 4 are the four Carlini named in the [Latent Space interview](https://www.latent.space/p/carlini); 5 to 10 extend the list to systems that read untrusted content and take actions. Terms follow common usage in the adversarial machine learning literature (see NIST AI 100-2 for definitions); state the objective, the technique, and the assumed access separately when you fill a row.
+Ten failure modes to check against every new system, used by the failure-mode pass in credo-taste. Fill one row per item:
+
+| Item | Applies? | Why (interface, access, data flow) | Most realistic variant and rough cost | Known prior work | Worth a look? |
+
+Ten failure modes: Items 1 to 4 are the four Carlini named in the [Latent Space interview](https://www.latent.space/p/carlini); 5 to 10 extend the list to systems that read untrusted content and take actions. Terms follow common usage in the adversarial machine learning literature (see NIST AI 100-2 for definitions); state the objective, the technique, and the assumed access separately when you fill a row.
 
 | # | Failure mode | Objective (what fails) | Typical access needed | First question to ask |
 | --- | --- | --- | --- | --- |

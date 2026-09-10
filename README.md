@@ -6,7 +6,7 @@ Status: draft v0. License not yet chosen.
 
 ## What this is, and is not
 
-The essay's content is not a checklist. It is a set of questions Carlini asks himself at particular moments (what makes me want to shout, how many months ahead am I, what would the conclusion say if everything worked, who is the reader and what do they believe) and the episodes in which those questions paid off. This repository carries the questions and the episodes, and the one habit the essay says builds taste: writing predictions down and comparing them with what happened.
+The essay's content is not a checklist. It is a set of questions Carlini asks himself at particular moments (what makes me want to shout, how many months ahead am I, what would the conclusion say if everything worked, who is the reader and what do they believe) and the episodes in which those questions paid off. This repository carries the questions and the episodes, and the one habit the essay says builds taste: writing predictions down and comparing them with what happened. Five skills, one always-on file, two small scripts.
 
 It applies to long-horizon work only. A research direction, a paper, a multi-month improvement of a system you own: yes. A ticket, a bug, a customer deadline, this week's task: no. The scope test is in [AGENTS.md](AGENTS.md); the agent asks which kind of work it is before applying anything here.
 
@@ -14,62 +14,43 @@ Existing skills such as [research-companion](https://github.com/andrehuang/resea
 
 ## Three layers
 
-1. Always on. [AGENTS.md](AGENTS.md) holds the scope test and five stances the agent keeps in every long-horizon conversation. Copy its credo section into your project's `AGENTS.md`; [CLAUDE.md](CLAUDE.md) points Claude Code at it. Skills fire only when triggered; this layer is what makes the thinking continuous.
-2. Thinking skills. Dialogue-first, no forms, ending when you can state your own judgment.
-3. The record. A journal of ideas, predictions, and hindsight, plus a monthly review of the portfolio.
+1. Always on. [AGENTS.md](AGENTS.md) holds the scope test, five stances the agent keeps in every long-horizon conversation, and the owner settings (journal path, near-term exclusions, comparative advantage, tenets held differently). Copy it into your project's `AGENTS.md`; [CLAUDE.md](CLAUDE.md) points Claude Code at it. Skills fire only when triggered; this layer is what makes the thinking continuous, and it is where your own data lives so a reinstall does not erase it.
+2. Thinking skills. Dialogue-first, no forms or scores, one question per turn, with stop rules, ending when you can state your own judgment.
+3. The record. A journal of ideas, predictions, hindsight, and monthly reviews, appended by a small script so nothing old is ever rewritten.
 
-### Thinking skills
+## Skills
 
-| Skill | Moment | What you leave with |
-| --- | --- | --- |
-| [credo-taste](skills/credo-taste/SKILL.md) | Choosing a direction, weighing an idea, stuck mid-project | Your own stated judgment, reached through his questions and his episodes as analogies |
-| [credo-conclusion-first](skills/credo-conclusion-first/SKILL.md) | Starting or continuing one project | The best-case conclusion, the one idea, the riskiest part, and a continue / kill / pivot / de-risk decision |
-| [credo-paper-plan](skills/credo-paper-plan/SKILL.md) | About to write a paper or section | A seven-part plan (idea, reader, conclusion, story arc, figures, section order with reasons, abstract shape); you draft, the agent critiques |
-| [credo-read-then-forget](skills/credo-read-then-forget/SKILL.md) | A paper landed | Scan, extract, or reproduce, then what the paper inherits unexamined and what you would do without it |
-| [credo-journal](skills/credo-journal/SKILL.md) | An idea appears, a decision is made, a result arrives | An appended idea, prediction, or hindsight entry; predictions read back when outcomes come |
-| [credo-distribution-review](skills/credo-distribution-review/SKILL.md) | Monthly | Which one or two efforts could be great, what dies, months-ahead guesses, rejections read as samples |
+| Skill | Kind | Moment | What you leave with |
+| --- | --- | --- | --- |
+| [credo-taste](skills/credo-taste/SKILL.md) | thinking | Choosing a direction, starting or continuing a project, stuck or drifting, a new system or dataset appears, rejected | Your own stated judgment, reached through his questions; the project gate (best-case conclusion, one idea, riskiest part, continue / kill / pivot); the failure-mode pass over a fixed list |
+| [credo-paper-plan](skills/credo-paper-plan/SKILL.md) | thinking | About to write a paper or section | A seven-part plan (idea, reader, conclusion, story arc, figures, section order with reasons, abstract shape); you draft, the agent critiques |
+| [credo-read-then-forget](skills/credo-read-then-forget/SKILL.md) | thinking | A paper landed | Scan, extract, or reproduce, then what the paper inherits unexamined and what you would do without it |
+| [credo-journal](skills/credo-journal/SKILL.md) | record | An idea appears, a decision is made, a result arrives, monthly | An appended idea, prediction, hindsight, or review entry; predictions read back when outcomes come |
+| [credo-release](skills/credo-release/SKILL.md) | checklist | Submitting, camera-ready, arXiv | Script findings with `file:line` for what a program can catch, then the human items confirmed one by one |
 
-The tenets with the owner's stance on each are in [skills/credo-taste/references/tenets.md](skills/credo-taste/references/tenets.md); the episodes used as analogies are in [skills/credo-taste/references/episodes.md](skills/credo-taste/references/episodes.md).
+`credo-release` is the one procedural skill and is kept apart from the thinking skills on purpose: a checklist should not argue, and a judgment skill should not pretend to be exhaustive. Its [coverage.md](skills/credo-release/references/coverage.md) records which of Carlini's checklist items a program checks and which still need eyes, a PDF, or the call for papers.
 
-### Habits (not the credo)
-
-Fixed procedures that run at a moment, kept apart from the thinking skills so a checklist never pretends to be judgment.
-
-| Habit | Moment | Result |
-| --- | --- | --- |
-| [credo-threat-list](habits/credo-threat-list/SKILL.md) | A new dataset, model, API, or agent appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
-| [credo-latex-lint](habits/credo-latex-lint/SKILL.md) | LaTeX sources are near final | Script findings with `file:line` for everything a program can catch; see [coverage.md](habits/credo-latex-lint/references/coverage.md) |
-| [credo-release-checklist](habits/credo-release-checklist/SKILL.md) | Submitting, camera-ready, arXiv | The human items, one at a time, each confirmed by the author |
+The tenets are in [skills/credo-taste/references/tenets.md](skills/credo-taste/references/tenets.md) and the episodes used as analogies in [skills/credo-taste/references/episodes.md](skills/credo-taste/references/episodes.md). Both load only when a conversation needs them.
 
 ## Install
 
-Two things get installed: the skills (six thinking skills, three habits) and the always-on layer (a section of `AGENTS.md` copied into your project). The CLI handles the first; the second is a copy you make once per project.
+Two things get installed: the five skills and the always-on layer (`AGENTS.md` copied into your project and filled in). The CLI handles the first; the second is a copy you make once per project.
 
-Every skill and habit is named `credo-<name>` so the pack groups together in a skill list and does not collide with generic names such as `taste` or `threat-list` used by other packs. The prefix is the repository's, not a reference to the Elixir linter of the same name.
+Every skill is named `credo-<name>` so the pack groups together in a skill list and does not collide with generic names such as `taste` or `threat-list` used by other packs. The prefix is the repository's, not a reference to the Elixir linter of the same name.
 
 ### With `npx skills` (preferred)
 
 Prerequisite: Node.js 18 or newer. Browse the pack first:
 
 ```bash
-npx --yes skills add 'gigio1023/research-credo#main' --list --full-depth
+npx --yes skills add 'gigio1023/research-credo#main' --list
 ```
 
-Install the six thinking skills globally for the agents you use. Pass an explicit `--agent` list; the CLI otherwise installs for whatever agent it detects.
+Install the five skills globally for the agents you use. Pass an explicit `--agent` list; the CLI otherwise installs for whatever agent it detects.
 
 ```bash
 npx --yes skills add 'gigio1023/research-credo#main' \
-  --skill credo-taste credo-conclusion-first credo-paper-plan credo-read-then-forget credo-journal credo-distribution-review \
-  --agent claude-code codex \
-  --global \
-  --yes
-```
-
-The habits live under `habits/`, which the CLI scans only with `--full-depth`. Add the ones you want:
-
-```bash
-npx --yes skills add 'gigio1023/research-credo#main' --full-depth \
-  --skill credo-threat-list credo-latex-lint credo-release-checklist \
+  --skill credo-taste credo-paper-plan credo-read-then-forget credo-journal credo-release \
   --agent claude-code codex \
   --global \
   --yes
@@ -90,38 +71,41 @@ Paste this into Claude Code, Codex, or another agent that can run shell commands
 
 ```text
 Install the research-credo skills from https://github.com/gigio1023/research-credo
-with `npx skills`, global scope, for the agents I use here: the six skills under
-skills/ and, using --full-depth, the three habits under habits/. Then copy the
-"Research credo" section of that repository's AGENTS.md into this project's
-AGENTS.md and add a one-line pointer to it in CLAUDE.md. Show me `npx skills list
---global` when done.
+with `npx skills`, global scope, for the agents I use here (five skills under
+skills/). Then copy that repository's AGENTS.md sections into this project's
+AGENTS.md, ask me for the owner settings at the bottom (journal path, near-term
+exclusions, comparative advantage), and add a one-line pointer in CLAUDE.md.
+Show me `npx skills list --global` when done.
 ```
 
 ### Manually
 
-Each skill and habit is a self-contained directory with a `SKILL.md`. From a checkout, link the ones you want into your harness's skill directory:
+Each skill is a self-contained directory with a `SKILL.md`. From a checkout, link the ones you want into your harness's skill directory:
 
 ```bash
-for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done   # Claude Code
-for s in skills/*/ habits/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done   # Codex
+for s in skills/*/; do ln -s "$(pwd)/$s" "$HOME/.claude/skills/$(basename "$s")"; done   # Claude Code
+for s in skills/*/; do ln -s "$(pwd)/$s" "$HOME/.agents/skills/$(basename "$s")"; done   # Codex
 ```
 
 ### Wire the always-on layer
 
-Whichever way the skills were installed, copy the credo section of [AGENTS.md](AGENTS.md) into your research project's `AGENTS.md` (Codex and other harnesses that read it) and add a pointer in `CLAUDE.md` (Claude Code), as this repository does. Without this step the skills fire only when triggered, and nothing keeps the credo in the room between calls.
+Whichever way the skills were installed, copy [AGENTS.md](AGENTS.md) into your research project's `AGENTS.md` (Codex and other harnesses that read it), fill in the owner settings at its bottom, and add a pointer in `CLAUDE.md` (Claude Code), as this repository does. Without this step the skills fire only when triggered, nothing keeps the credo in the room between calls, and your journal path and stances have no home.
 
-Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. The lint script needs Python 3.10 or newer and no packages:
+Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. The two scripts need Python 3.10 or newer and no packages:
 
 ```bash
-python3 habits/credo-latex-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
+python3 skills/credo-release/scripts/check_tex.py path/to/main.tex --log path/to/main.log
+python3 skills/credo-journal/scripts/journal.py --path ~/research/journal.md read --older-than 90
 ```
 
 ## Local development
 
-Inspect a checkout without creating an update-tracked install. The listing must report nine names: six under `skills/`, three under `habits/`.
+Inspect a checkout without creating an update-tracked install. The listing must report five names.
 
 ```bash
-npx --yes skills add . --list --full-depth
+npx --yes skills add . --list
+python3 skills/credo-release/scripts/test_check_tex.py
+python3 skills/credo-journal/scripts/test_journal.py
 ```
 
 ## Attribution and license

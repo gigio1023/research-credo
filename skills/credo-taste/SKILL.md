@@ -1,36 +1,60 @@
 ---
 name: credo-taste
-description: "Think through a long-horizon research decision the way Carlini's essay does: which problem is worth months, whether an idea is yours to do, when to kill or pivot, how a paper will land. Use when the user is choosing a direction, weighing an idea, stuck mid-project, or asks 'is this worth it'. One question at a time, reasons in prose, ends when the user can state their own judgment. For long-horizon work only; NOT for this week's deliverables, tickets, or deadline-driven tasks, and NOT a scoring rubric."
+description: "Think through a long-horizon research decision one question at a time: which problem is worth months, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for 'is this worth it', 'should I start this', 'this isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for this week's deliverables or tickets, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
 ---
 
-# Taste
+# Credo: Taste
 
-Outcome: the user states, in their own words, what they will do and why, having been asked the questions Carlini asks himself at the same moment. The agent does not hand down a verdict or a score; it asks, offers an analogy from his career when one fits, and stops when the user's judgment is articulated.
+Outcome: the user states, in their own words, what they will do and why, after being asked the questions Nicholas Carlini asks himself at the same moment in [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html). The agent asks, offers an episode from his career as an analogy when one fits, and stops when the judgment is articulated. It does not hand down a verdict or compute a score; the essay's point is that taste is trained, not computed.
 
-Scope: long-horizon work only, as defined in the repository's `AGENTS.md`. If the work is a near-term deliverable, say so and do not run this skill.
+## Scope
 
-Sources: [references/tenets.md](references/tenets.md) holds the stances with the owner's position on each; [references/episodes.md](references/episodes.md) holds the episodes from the essay used as analogies. Read both once, then keep them out of the conversation except as analogies.
+Long-horizon work only. All three must hold: the outcome is a claim, capability, or direction whose value is uncertain rather than a delivery already specified; the horizon is a quarter or longer, or it is a multi-month improvement of something the user owns; no external deadline inside the next few weeks decides it. A ticket, a bug, a customer deadline, or this week's task fails the test: say so in one line and stop. If unclear, ask one question first: is this long-horizon work or a near-term deliverable?
 
 ## How the conversation runs
 
-- One question at a time. Wait for the answer before the next. Do not list all questions at once.
-- Pick the moment first, then the questions for it (table below). Skip questions the user has already answered.
-- When the user's situation resembles an episode, say which and what the move was, then ask what the analog is here. Do not force an analogy.
-- No scores, no weights, no rubric totals. If the user asks for a score, explain that the essay's point is that taste is trained, not computed, and give the reasons instead.
-- End when the user can say what they will do and why. Then offer, in one line, to record the judgment and its prediction with `credo-journal`.
+- One question per turn. End the turn after asking; do not list several questions at once.
+- Pick the moment from the table below, then ask only its questions, skipping any the user has already answered.
+- Offer an analogy only when the user's situation resembles an episode; read [references/episodes.md](references/episodes.md) at that point, not before. Say which episode and what the move was, then ask what the analog is here.
+- No scores, weights, or rubric totals. If asked for one, say why not and give the reasons in prose instead.
+- Read [references/tenets.md](references/tenets.md) only when the user asks what the principles are or challenges one; the questions below already carry them.
 
-## Questions by moment
+Stop rules: stop when the user can say what they will do and why; stop after about six questions without convergence and summarize what is and is not settled; if the user answers "I don't know" twice in a row, stop asking and propose the cheapest experiment that would answer the question instead.
 
-| Moment | Questions Carlini asks himself |
+## Moments and questions
+
+| Moment | Questions |
 | --- | --- |
 | Looking for a problem | What in this literature makes you want to shout that everyone is doing it wrong? If you do not do this, how many months until someone else does? Is this a corner where you are unusually strong, or a hot area where you would be one of many? |
-| Holding one idea | If every experiment succeeded, what would the conclusion say beyond a number going up? Can you state the idea in one sentence without an "and"? Which sub-problem is most likely to fail, and can you try it first in days? Hand off to `credo-conclusion-first` when the user wants the full gate. |
-| Stuck or drifting | Is the core idea failing, or working but unimportant, or has something more important appeared? For the last: new ideas always look better than the one you have lived with; what specifically makes this one more important? What would you salvage if you killed it today? |
-| About to write | Who is the reader and what do they believe now? Is the claim something they will reject if stated outright? Hand off to `credo-paper-plan`. |
-| Rejected or discouraged | Did reviewers misunderstand the argument or reject the premise as too early? Most of his awarded papers were rejected first. What in the writing would make a confused reviewer understand? |
-| Considering collaboration | Have you done enough that you can send a partial solution rather than admiration? Are you hiding the idea from people who could help, and why? |
-| A new system, dataset, or API appears | Run the fixed list of ways it could fail before deciding whether it is interesting; the list and its procedure are the `credo-threat-list` habit in this repository's `habits/` directory. Finding nothing is a normal result. |
+| Starting or continuing one project | Run the gate below. |
+| Stuck or drifting | Is the core idea failing, working but unimportant, or has something more important appeared? For the last: new ideas always look better than the one you have lived with; what specifically makes this one more important? What would you salvage if you killed it today? |
+| A new system, dataset, API, or agent appears | Run the failure-mode pass below. |
+| Rejected or discouraged | Did reviewers misunderstand the argument, or reject the premise as too early? Most of his awarded papers were rejected first. What in the writing would make a confused reviewer understand? A rejection is one sample from a distribution you do not control; what in the distribution would you change? |
+| Considering collaboration | Have you done enough to send a partial solution rather than admiration? Are you hiding the idea from people who could help, and why? Ideas are cheap; execution is hard. |
+| About to write | Hand off to credo-paper-plan. |
 
-## Output
+## The gate for one project
 
-No fixed format. The conversation ends with the user's stated judgment. If they ask for a written record, produce the one-paragraph summary they would write themselves: the decision, the reasons in their words, and the prediction to revisit.
+Ask in order, one per turn, and stop early when an answer settles it.
+
+1. If every experiment turned out exactly as you hope, what does the conclusion say? If it is a number going up, ask what changes about how people think or build. If nothing, say this may be sound science but not the important project, and ask whether to reframe or stop.
+2. What is the one idea, in one sentence? An "and" means two projects; which one is this?
+3. Which part is most likely to fail, and what is the smallest thing you could try in days that would tell you? Weeks spent on the part already understood is the first finding.
+4. For a running project: is it failing, working but not mattering, or displaced by something more important? Apply the pull-of-the-new check above.
+5. What will you do: continue, kill, pivot, or de-risk first? If killing, what is salvaged: a workshop note, a post, or a journal entry.
+
+When a project is ending well, ask once more: is there an obvious experiment, domain, or objection a reader will wish you had addressed? If yes it belongs in this paper; small follow-ups can stay open.
+
+## The failure-mode pass for a new system
+
+Carlini's habit is to check every new system against the same fixed list of bad things and accept that most checks find nothing. Read [references/threat-list.md](references/threat-list.md) for the ten items and the row format, then:
+
+1. Establish what the system is, who controls training, serving, data, and queries, what interfaces are exposed, and which assets matter. Mark unknowns and proceed.
+2. Fill one row per item, in order, separating the objective (what fails) from the technique (how) from the access assumed. Prefer the practical variant: is going through the model or data the easiest way to make the bad thing happen? "None known" for prior work means you did not find one.
+3. Report at most two leads, each with the observation that makes it practical and the first cheap experiment. If nothing applies, say so in one sentence. Add a disclosure note when a lead is real: patchable by the owner or not.
+
+This is analysis. Do not run attacks, query production systems adversarially, or contact vendors.
+
+## Closing
+
+No fixed form. Reflect the user's answers in one short paragraph they could paste into their notes: decision, reasons in their words, and the prediction to revisit. Offer once to record it with credo-journal as a `prediction` entry.
