@@ -1,6 +1,6 @@
 # Manual checklist
 
-Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30). Only the items that need a person are here. Items a program can check (TODO markers, merge-conflict markers, doubled words, `..` and `??`, blind author names, abstract macros, commented-out acknowledgments, build-log words) are run by latex-release-lint; see its coverage reference. Add new items with a date under "Added later".
+Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/credo-release-checklist.html) (2022-01-30). Only the items that need a person are here. Items a program can check (TODO markers, merge-conflict markers, doubled words, `..` and `??`, blind author names, abstract macros, commented-out acknowledgments, build-log words) are run by credo-latex-lint; see its coverage reference. Add new items with a date under "Added later".
 
 ## Every release
 

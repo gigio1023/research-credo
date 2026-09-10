@@ -1,6 +1,6 @@
 # Coverage of Carlini's checklist
 
-Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30) is a list the author runs before every release. Most of its items assume a person reading the paper. This table records which items `scripts/check_tex.py` checks, how, and which remain with the author in paper-release-checklist.
+Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/credo-release-checklist.html) (2022-01-30) is a list the author runs before every release. Most of its items assume a person reading the paper. This table records which items `scripts/check_tex.py` checks, how, and which remain with the author in credo-release-checklist.
 
 ## Automated by the script
 
@@ -18,7 +18,7 @@ Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writin
 
 Additions not in his list: the script follows `\input` and `\include` so multi-file papers are checked whole, and it strips comments so a TODO in a comment does not count.
 
-## Left to the author (paper-release-checklist)
+## Left to the author (credo-release-checklist)
 
 These need a rendered PDF, the build itself, the call for papers, or knowledge the script does not have:
 

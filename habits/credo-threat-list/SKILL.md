@@ -1,5 +1,5 @@
 ---
-name: threat-list
+name: credo-threat-list
 description: "Run a fixed list of failure modes against a newly encountered ML system, dataset, API, model release, agent, or data pipeline: evasion at inference time, data poisoning, model extraction, training-data extraction, prompt injection, and the rest of the list. Use when the user says 'a new dataset/model/API appeared, is there an attack here', 'threat-model this', or when a research direction touches an unfamiliar system. Output is an applicability memo; finding nothing is a normal result. NOT for executing attacks, running a red-team campaign or penetration test, or reviewing an internal product's security (follow that team's process)."
 ---
 
@@ -36,7 +36,7 @@ Rules:
 ## Output
 
 1. The table, all items.
-2. At most two leads, each with the one observation that makes it practical and the first cheap experiment that would confirm or kill it. Hand a lead to the `conclusion-first` skill if the user wants to pursue it.
+2. At most two leads, each with the one observation that makes it practical and the first cheap experiment that would confirm or kill it. Hand a lead to the `credo-conclusion-first` skill if the user wants to pursue it.
 3. If nothing applies, say so in one sentence. Do not manufacture a lead.
 4. A disclosure note when a lead is real: is the flaw patchable by the system owner or not, since that decides how quickly it should be reported and published.
 

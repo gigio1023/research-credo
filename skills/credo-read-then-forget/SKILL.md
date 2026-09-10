@@ -1,5 +1,5 @@
 ---
-name: read-then-forget
+name: credo-read-then-forget
 description: "Read a paper the way the essay prescribes: pick the mode (scan for the one new thing, extract one needed piece, or reproduce), then name what the paper inherits from its field without argument and what the user would do if they had not read it. Use when a paper, preprint, or PDF lands during long-horizon work and the user asks what it does, whether to read it, or what to take from it. NOT for surveys across many papers, related-work sections, or reading for a near-term deliverable."
 ---
 
@@ -25,7 +25,7 @@ Add one paragraph with three parts:
 
 1. Inherited conventions: the metric, threat model, baseline set, dataset, or early arbitrary decision the paper adopts because the field does, with any that look unjustified marked.
 2. The counterfactual: if the user had not read this paper, what would they have done on their problem? Name where the paper's framing would pull them and whether that pull is earned.
-3. One question the paper makes the user want to shout about, if any. That is where their own problem may be (see episode E1 in the taste references).
+3. One question the paper makes the user want to shout about, if any. That is where their own problem may be (see episode E1 in the credo-taste references).
 
 ## Output
 

@@ -1,5 +1,5 @@
 ---
-name: paper-plan
+name: credo-paper-plan
 description: "Plan a research paper before any prose is written: the one idea, the reader and what they believe now, the introduction's story arc, a figure storyboard, the best-case conclusion, and why each section sits where it does. Use when the user is about to write a paper or a section, or has a draft that reads as two papers. The agent plans and critiques; the author drafts. For long-horizon work. NOT for line editing, polishing prose, submission mechanics (habits/), or short reports and tickets."
 ---
 
@@ -9,14 +9,14 @@ Outcome: a written plan the author can draft from, and, when a draft exists, a c
 
 Scope: long-horizon work only, per the repository's `AGENTS.md`.
 
-Adapted from the writing sections of Carlini's essay. The principles it draws on are in the `taste` skill's references; this skill turns them into a plan.
+Adapted from the writing sections of Carlini's essay. The principles it draws on are in the `credo-taste` skill's references; this skill turns them into a plan.
 
 ## Build the plan
 
 Ask in this order, one at a time, and write the plan as answers arrive.
 
 1. The one idea, in one sentence. An "and" means two papers; settle which one before continuing.
-2. The reader. Default: the author six months ago. What did that person believe? What would they have needed to hear to think this idea was worth pursuing? If the paper argues against a community's belief, the reader is one member of that community, and the claim may need to arrive last (see episode E8 in the taste references).
+2. The reader. Default: the author six months ago. What did that person believe? What would they have needed to hear to think this idea was worth pursuing? If the paper argues against a community's belief, the reader is one member of that community, and the claim may need to arrive last (see episode E8 in the credo-taste references).
 3. The best-case conclusion. What does the reader take away beyond the results? If it restates the abstract, the plan is not done.
 4. The introduction as a story. Where does the reader stand in paragraph one? How far is the journey to the setting where the idea makes sense: one sentence, a paragraph, or two pages? Two pages is the ceiling.
 5. The figure storyboard. Which figure shows the problem, which the method, which the results? Each must carry a one-sentence takeaway in its caption and be understood without the text.

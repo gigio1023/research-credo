@@ -30,10 +30,10 @@ At a decision point in long-horizon work, ask for the prediction in one question
 
 | Moment | Skill |
 | --- | --- |
-| Choosing a direction, weighing an idea, stuck mid-project | `taste` |
-| Starting or continuing one project | `conclusion-first` |
-| About to write a paper or section | `paper-plan` |
-| A paper landed | `read-then-forget` |
-| Recording ideas, predictions, hindsight | `taste-journal` |
-| Monthly portfolio review | `distribution-review` |
+| Choosing a direction, weighing an idea, stuck mid-project | `credo-taste` |
+| Starting or continuing one project | `credo-conclusion-first` |
+| About to write a paper or section | `credo-paper-plan` |
+| A paper landed | `credo-read-then-forget` |
+| Recording ideas, predictions, hindsight | `credo-journal` |
+| Monthly portfolio review | `credo-distribution-review` |
 | Release mechanics and fixed checklists (not credo) | `habits/` |

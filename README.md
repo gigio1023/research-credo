@@ -22,14 +22,14 @@ Existing skills such as [research-companion](https://github.com/andrehuang/resea
 
 | Skill | Moment | What you leave with |
 | --- | --- | --- |
-| [taste](skills/taste/SKILL.md) | Choosing a direction, weighing an idea, stuck mid-project | Your own stated judgment, reached through his questions and his episodes as analogies |
-| [conclusion-first](skills/conclusion-first/SKILL.md) | Starting or continuing one project | The best-case conclusion, the one idea, the riskiest part, and a continue / kill / pivot / de-risk decision |
-| [paper-plan](skills/paper-plan/SKILL.md) | About to write a paper or section | A seven-part plan (idea, reader, conclusion, story arc, figures, section order with reasons, abstract shape); you draft, the agent critiques |
-| [read-then-forget](skills/read-then-forget/SKILL.md) | A paper landed | Scan, extract, or reproduce, then what the paper inherits unexamined and what you would do without it |
-| [taste-journal](skills/taste-journal/SKILL.md) | An idea appears, a decision is made, a result arrives | An appended idea, prediction, or hindsight entry; predictions read back when outcomes come |
-| [distribution-review](skills/distribution-review/SKILL.md) | Monthly | Which one or two efforts could be great, what dies, months-ahead guesses, rejections read as samples |
+| [credo-taste](skills/credo-taste/SKILL.md) | Choosing a direction, weighing an idea, stuck mid-project | Your own stated judgment, reached through his questions and his episodes as analogies |
+| [credo-conclusion-first](skills/credo-conclusion-first/SKILL.md) | Starting or continuing one project | The best-case conclusion, the one idea, the riskiest part, and a continue / kill / pivot / de-risk decision |
+| [credo-paper-plan](skills/credo-paper-plan/SKILL.md) | About to write a paper or section | A seven-part plan (idea, reader, conclusion, story arc, figures, section order with reasons, abstract shape); you draft, the agent critiques |
+| [credo-read-then-forget](skills/credo-read-then-forget/SKILL.md) | A paper landed | Scan, extract, or reproduce, then what the paper inherits unexamined and what you would do without it |
+| [credo-journal](skills/credo-journal/SKILL.md) | An idea appears, a decision is made, a result arrives | An appended idea, prediction, or hindsight entry; predictions read back when outcomes come |
+| [credo-distribution-review](skills/credo-distribution-review/SKILL.md) | Monthly | Which one or two efforts could be great, what dies, months-ahead guesses, rejections read as samples |
 
-The tenets with the owner's stance on each are in [skills/taste/references/tenets.md](skills/taste/references/tenets.md); the episodes used as analogies are in [skills/taste/references/episodes.md](skills/taste/references/episodes.md).
+The tenets with the owner's stance on each are in [skills/credo-taste/references/tenets.md](skills/credo-taste/references/tenets.md); the episodes used as analogies are in [skills/credo-taste/references/episodes.md](skills/credo-taste/references/episodes.md).
 
 ### Habits (not the credo)
 
@@ -37,13 +37,15 @@ Fixed procedures that run at a moment, kept apart from the thinking skills so a 
 
 | Habit | Moment | Result |
 | --- | --- | --- |
-| [threat-list](habits/threat-list/SKILL.md) | A new dataset, model, API, or agent appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
-| [latex-release-lint](habits/latex-release-lint/SKILL.md) | LaTeX sources are near final | Script findings with `file:line` for everything a program can catch; see [coverage.md](habits/latex-release-lint/references/coverage.md) |
-| [paper-release-checklist](habits/paper-release-checklist/SKILL.md) | Submitting, camera-ready, arXiv | The human items, one at a time, each confirmed by the author |
+| [credo-threat-list](habits/credo-threat-list/SKILL.md) | A new dataset, model, API, or agent appears | Applicability memo over a fixed list of failure modes; "nothing here" is a valid result |
+| [credo-latex-lint](habits/credo-latex-lint/SKILL.md) | LaTeX sources are near final | Script findings with `file:line` for everything a program can catch; see [coverage.md](habits/credo-latex-lint/references/coverage.md) |
+| [credo-release-checklist](habits/credo-release-checklist/SKILL.md) | Submitting, camera-ready, arXiv | The human items, one at a time, each confirmed by the author |
 
 ## Install
 
 Two things get installed: the skills (six thinking skills, three habits) and the always-on layer (a section of `AGENTS.md` copied into your project). The CLI handles the first; the second is a copy you make once per project.
+
+Every skill and habit is named `credo-<name>` so the pack groups together in a skill list and does not collide with generic names such as `taste` or `threat-list` used by other packs. The prefix is the repository's, not a reference to the Elixir linter of the same name.
 
 ### With `npx skills` (preferred)
 
@@ -57,7 +59,7 @@ Install the six thinking skills globally for the agents you use. Pass an explici
 
 ```bash
 npx --yes skills add 'gigio1023/research-credo#main' \
-  --skill taste conclusion-first paper-plan read-then-forget taste-journal distribution-review \
+  --skill credo-taste credo-conclusion-first credo-paper-plan credo-read-then-forget credo-journal credo-distribution-review \
   --agent claude-code codex \
   --global \
   --yes
@@ -67,7 +69,7 @@ The habits live under `habits/`, which the CLI scans only with `--full-depth`. A
 
 ```bash
 npx --yes skills add 'gigio1023/research-credo#main' --full-depth \
-  --skill threat-list latex-release-lint paper-release-checklist \
+  --skill credo-threat-list credo-latex-lint credo-release-checklist \
   --agent claude-code codex \
   --global \
   --yes
@@ -111,7 +113,7 @@ Whichever way the skills were installed, copy the credo section of [AGENTS.md](A
 Frontmatter is limited to `name` and `description`, so the same files load in both harnesses. The lint script needs Python 3.10 or newer and no packages:
 
 ```bash
-python3 habits/latex-release-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
+python3 habits/credo-latex-lint/scripts/check_tex.py path/to/main.tex --log path/to/main.log
 ```
 
 ## Local development

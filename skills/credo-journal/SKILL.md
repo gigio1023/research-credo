@@ -1,5 +1,5 @@
 ---
-name: taste-journal
+name: credo-journal
 description: "Keep the record that trains research taste: append problems worth solving, predictions made at decisions (why it will work, what will kill it, what reviewers will ask), and hindsight notes when outcomes arrive. Use when a long-horizon idea appears, a project decision is made, a result or review comes back, or the user is choosing what to do next. Append-only; re-read on a schedule, not daily. NOT for task tracking, meeting notes, or near-term deliverables."
 ---
 
@@ -41,13 +41,13 @@ Append at the end of the file. Never modify earlier text; corrections are new da
 Rules that change behavior:
 
 - Ideas record problems, not solutions. If the user brings a solution, ask what problem it would settle and record that first.
-- A prediction is taken at every decision the `taste` or `conclusion-first` conversation ends with. Ask for it in one question; do not draft it for the user.
+- A prediction is taken at every decision the `credo-taste` or `credo-conclusion-first` conversation ends with. Ask for it in one question; do not draft it for the user.
 - When a result, review, or acceptance arrives, find the matching prediction and read it back to the user before discussing the outcome. Then append the hindsight entry in their words.
 - Do not evaluate an idea at capture time. Append and return the user to their task.
 
 ## Re-read on a schedule, not daily
 
-The journal is read in two situations only: when the user is choosing what to do next, and during the monthly `distribution-review`. In both, read entries older than about three months first; the gap is the filter. Do not surface journal entries unprompted during ordinary work.
+The journal is read in two situations only: when the user is choosing what to do next, and during the monthly `credo-distribution-review`. In both, read entries older than about three months first; the gap is the filter. Do not surface journal entries unprompted during ordinary work.
 
 ## Output
 

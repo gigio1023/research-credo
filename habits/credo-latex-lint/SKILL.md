@@ -1,13 +1,13 @@
 ---
-name: latex-release-lint
-description: "Run the mechanical pre-release checks on LaTeX sources with a bundled script: TODO and FIXME markers, author note macros, merge-conflict markers, doubled words, '..' and '??' remnants, author names under blind review, LaTeX macros in the abstract, commented-out acknowledgments, and error/warning/undefined/missing lines in the build log. Use when the user asks to lint the paper source, check the tex before submitting, or when paper-release-checklist needs machine evidence. Reports file:line findings and edits nothing. NOT for the author's walkthrough of a release (paper-release-checklist) or for content and structure review (paper-plan)."
+name: credo-latex-lint
+description: "Run the mechanical pre-release checks on LaTeX sources with a bundled script: TODO and FIXME markers, author note macros, merge-conflict markers, doubled words, '..' and '??' remnants, author names under blind review, LaTeX macros in the abstract, commented-out acknowledgments, and error/warning/undefined/missing lines in the build log. Use when the user asks to lint the paper source, check the tex before submitting, or when credo-release-checklist needs machine evidence. Reports file:line findings and edits nothing. NOT for the author's walkthrough of a release (credo-release-checklist) or for content and structure review (credo-paper-plan)."
 ---
 
 # LaTeX Release Lint
 
 Outcome: every check the script can make has been run on the paper's LaTeX sources (and build log when available), and the findings are reported verbatim with `file:line` so a reviewer can verify each one. The paper is not edited.
 
-This skill automates the part of Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) that can be checked by a program. Which of his items are covered, how, and what stays manual is in [references/coverage.md](references/coverage.md). The items that need eyes, a PDF, or the call for papers belong to paper-release-checklist.
+This skill automates the part of Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/credo-release-checklist.html) that can be checked by a program. Which of his items are covered, how, and what stays manual is in [references/coverage.md](references/coverage.md). The items that need eyes, a PDF, or the call for papers belong to credo-release-checklist.
 
 ## Run
 

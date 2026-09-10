@@ -1,5 +1,5 @@
 ---
-name: distribution-review
+name: credo-distribution-review
 description: "Run the periodic review of the user's long-horizon portfolio: which one or two efforts could be great, which to kill or park, whether each is still months ahead of the field, and how recent rejections or null results read as samples rather than verdicts. Use monthly or when the user asks 'what should I be working on'. Reads the taste journal. NOT for sprint planning, weekly tasks, or ranking near-term deliverables."
 ---
 
@@ -20,7 +20,7 @@ Scope: long-horizon efforts only, per the repository's `AGENTS.md`. Near-term de
 2. For each effort: is the core still working, does the best-case conclusion still matter, and has anything more important appeared since the last review? Kill or park what fails, and say what is salvaged.
 3. For each surviving effort: how many months ahead of the next person is it now, compared to the last guess in the journal? Has the area's importance moved?
 4. Anything rejected or null since last time: what did the reviewers reject, the premise or the argument? What in the distribution would you change, and what is just the sample?
-5. Is the user's main effort where their skill and the area's current importance meet, or in a corner the field has left (episode E10 in the taste references)?
+5. Is the user's main effort where their skill and the area's current importance meet, or in a corner the field has left (episode E10 in the credo-taste references)?
 
 No scores. Reasons in the user's words.
 

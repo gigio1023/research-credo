@@ -23,7 +23,7 @@ Paraphrased from Nicholas Carlini's writing, mainly [How to win a best paper awa
 | T4 | Do not start research with the goal of a conference paper. Aim to find something important and new; the paper follows. One or two projects a year may be great; the rest are practice, and practice is how the great ones are found. | Pick your ideas for impact | adopted |
 | T5 | The size of a contribution is the number of months between your result and when the next person would have found it. Aim for problems that would have taken others months, and notice where reading the literature makes you want to shout that everyone is doing it wrong. | Do something only you can do | adopted |
 | T6 | Impact is your skill in an area multiplied by how much the area matters right now. Find the corner of the field where you are strongest, name your comparative advantage, and be honest when the world has moved past what you are best at. | Find your comparative advantage; Get lucky: well suited | adapted: the owner names their own comparative advantage in this file when known |
-| T7 | Keep a fixed list of ways a system can fail (evasion at inference time, data poisoning, model extraction, training-data extraction, and the rest) and run the whole list against every new system, dataset, or API. Most runs find nothing. That is the cost of finding the ones that matter. | [Latent Space interview](https://www.latent.space/p/carlini), problem-selection segment around 00:53 | adopted; list maintained in the `threat-list` habit under `habits/` |
+| T7 | Keep a fixed list of ways a system can fail (evasion at inference time, data poisoning, model extraction, training-data extraction, and the rest) and run the whole list against every new system, dataset, or API. Most runs find nothing. That is the cost of finding the ones that matter. | [Latent Space interview](https://www.latent.space/p/carlini), problem-selection segment around 00:53 | adopted; list maintained in the `credo-threat-list` habit under `habits/` |
 
 ## Executing
 
@@ -51,7 +51,7 @@ Paraphrased from Nicholas Carlini's writing, mainly [How to win a best paper awa
 
 | # | Tenet | Source | Stance |
 | --- | --- | --- | --- |
-| T15 | Keep an append-only ideas file that records problems worth solving rather than solutions, and re-read it only a few times a year so each idea is judged twice with time between. Run a written checklist before every paper release. Keep experiment iteration under a second where possible. | [My research idea logfile](https://nicholas.carlini.com/writing/2024/my-research-logfile.html); [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html); [Rapid Iteration](https://nicholas.carlini.com/writing/2022/rapid-iteration-machine-learning-research.html) | adopted |
+| T15 | Keep an append-only ideas file that records problems worth solving rather than solutions, and re-read it only a few times a year so each idea is judged twice with time between. Run a written checklist before every paper release. Keep experiment iteration under a second where possible. | [My research idea logfile](https://nicholas.carlini.com/writing/2024/my-research-logfile.html); [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/credo-release-checklist.html); [Rapid Iteration](https://nicholas.carlini.com/writing/2022/rapid-iteration-machine-learning-research.html) | adopted |
 
 ## Where the owner departs from the source
 
@@ -61,6 +61,6 @@ Record disagreements here so the skills can enforce the owner's version. Example
 
 - Carlini, N. (2026-03-09). How to win a best paper award (or, an opinionated take on how to do important research that matters). https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html
 - Carlini, N. (2024-01-21). My research idea logfile, 2016-2019. https://nicholas.carlini.com/writing/2024/my-research-logfile.html
-- Carlini, N. (2022-01-30). Research Paper Release Checklist. https://nicholas.carlini.com/writing/2022/paper-release-checklist.html
+- Carlini, N. (2022-01-30). Research Paper Release Checklist. https://nicholas.carlini.com/writing/2022/credo-release-checklist.html
 - Carlini, N. (2022-06-19). Rapid Iteration in Machine Learning Research. https://nicholas.carlini.com/writing/2022/rapid-iteration-machine-learning-research.html
 - Latent Space (2024-08-29). Why you should write your own LLM benchmarks, with Nicholas Carlini. https://www.latent.space/p/carlini
