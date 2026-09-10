@@ -9,7 +9,7 @@ Outcome: a written plan the author can draft from, and, when a draft exists, a c
 
 Scope: long-horizon work only (an uncertain claim or direction, a quarter or longer or a multi-month improvement the user owns, no deadline inside the next few weeks). A short report or a deliverable due this month is not planned here; say so and stop.
 
-Adapted from the writing sections of Carlini's essay. The episodes referred to below are in the credo-taste package (`references/episodes.md`); read one only when you cite it.
+Adapted from the writing sections of Carlini's essay. The episodes referred to below are in the credo-taste package, file episodes.md under its references; read one only when you cite it.
 
 ## Build the plan
 

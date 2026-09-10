@@ -25,7 +25,7 @@ Add one paragraph with three parts:
 
 1. Inherited conventions: the metric, threat model, baseline set, dataset, or early arbitrary decision the paper adopts because the field does, with any that look unjustified marked.
 2. The counterfactual: if the user had not read this paper, what would they have done on their problem? Name where the paper's framing would pull them and whether that pull is earned.
-3. One question the paper makes the user want to shout about, if any. That is where their own problem may be (episode E1 in the credo-taste package, `references/episodes.md`).
+3. One question the paper makes the user want to shout about, if any. That is where their own problem may be (episode E1 in the credo-taste package, file episodes.md under its references).
 
 ## Output
 
