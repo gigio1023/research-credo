@@ -9,7 +9,7 @@ Outcome: a release table for the paper in which every mechanical item carries a 
 
 Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html): a list the author runs before every release, grown by adding each mistake once it has been made. Which of his items a program can check and which need a person is recorded in [references/coverage.md](references/coverage.md); read it if the author asks why an item is where it is.
 
-This is the one procedural skill in the pack. It applies to any paper the user is releasing, not only long-horizon work.
+This skill handles release checks. It applies to any paper the user is releasing, not only long-horizon work.
 
 ## Phase A: what the script catches
 

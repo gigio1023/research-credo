@@ -2,6 +2,8 @@
 
 Agent skills for choosing research questions, developing judgment, and keeping sources useful across sessions. Works with Claude Code and Codex.
 
+![The six skills connect source collection and critical reading with research direction, paper planning, release checks, and a journal for predictions and reflection.](docs/research-credo.svg)
+
 ## Skills
 
 | Skill | Use it to |
@@ -18,8 +20,6 @@ Thinking exercises apply to long-horizon research. Source collection also suppor
 ## Research library
 
 Search saved material first, then fill gaps through Hugging Face paper tools and the web. Keep originals in `research/`, with one folder per work and a concise `index.md`. No database or background service.
-
-![Research questions start with the local library; web sources fill gaps and their originals return to the library.](docs/research-library.svg)
 
 ## Install
 
