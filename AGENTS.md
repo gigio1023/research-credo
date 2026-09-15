@@ -4,15 +4,23 @@ Standing instructions for agents working with the owner on research. Copy this f
 
 Adapted from Nicholas Carlini's essay [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html) (2026). Paraphrased; read the original.
 
-## Scope: long-horizon work only
+## Scope: long-horizon thinking
 
-Apply the credo only to work that is long-horizon. All three must hold:
+Apply the credo's thinking stances and journal habit only to work that is long-horizon. All three must hold:
 
 - Its outcome is a claim, a capability, or a direction whose value is uncertain, not a delivery whose shape is already specified.
 - Its horizon is a quarter or longer, or it is a multi-month improvement of something the owner is responsible for.
 - No external deadline inside the next few weeks decides it.
 
-Do not apply the credo to a ticket, a bug, a customer deadline, or this week's task; do that work well and move on. When the horizon is unclear, ask one question before anything else: is this long-horizon work or a near-term deliverable? The near-term exclusions listed in the owner settings below are never long-horizon.
+Do not apply those thinking exercises to a ticket, a bug, a customer deadline, or this week's task; do that work well and move on. When the horizon is unclear and a thinking exercise would help, ask whether this is long-horizon work or a near-term deliverable. The near-term exclusions listed in the owner settings below are never long-horizon. Research source collection has its own scope below and does not require this interview.
+
+## Research source collection
+
+Use `credo-research` actively for an explicit research, literature-search, or research-collection request in any field. Without an explicit request, use it only for a clear research question or an AI engineering or security question that needs research evidence. Routine implementation, debugging, everyday lookups, and casual conversation do not trigger a literature review from keywords alone. This operational workflow also applies to near-term investigations.
+
+Search the configured library before widening to the web. Preserve the relevant sources inspected or used in analysis as local originals with their figures and associated code, record unavailable materials honestly, and keep a concise Markdown index. Respect explicit read-only, offline, and no-download constraints. Library location is owner data; it must not live inside the installed skill. The detailed collection and verification rules live in `credo-research`.
+
+Apply `use-terminology` and `curate-terminology` when available, using the project's existing terminology reference. Preserve collected source text unchanged; terminology work alone does not require a new literature survey.
 
 ## Stances held in every long-horizon conversation
 
@@ -33,6 +41,7 @@ At a decision point in long-horizon work, ask for the prediction in one question
 | Choosing a direction, starting or continuing a project, stuck, a new system appears, rejected | `credo-taste` |
 | About to write a paper or section, or a draft reads as two papers | `credo-paper-plan` |
 | A paper landed | `credo-read-then-forget` |
+| Researching a topic or saving and reusing papers, research posts, figures, and code | `credo-research` |
 | Recording ideas, predictions, hindsight; the monthly portfolio review | `credo-journal` |
 | Releasing a paper (script checks, then author-confirmed items) | `credo-release` |
 
@@ -41,6 +50,7 @@ At a decision point in long-horizon work, ask for the prediction in one question
 These are the owner's data and live here, not inside the installed skills, so a reinstall does not erase them.
 
 - Journal path: `~/research/journal.md`
+- Research library path: `research/` relative to the project root; use an existing configured collection first, or `~/research/` without a project
 - Near-term exclusions this quarter (never treated as long-horizon): none listed
 - Comparative advantage, in one sentence (tenet T6): not yet written
 - Tenets I hold differently or have not decided (by number, with the change): T13 timeboxing, undecided
