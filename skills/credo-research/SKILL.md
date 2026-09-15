@@ -1,5 +1,5 @@
 ---
-name: credo-research-library
+name: credo-research
 description: >
   Investigate a topic and keep the sources in a simple local research library.
   Use actively for explicit research, literature-search, or research-collection
@@ -11,9 +11,9 @@ description: >
   lookups merely because an AI or security term appears.
 ---
 
-# Research Library
+# Research
 
-Answer the research question and leave the sources usable in a later session. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
+Investigate questions. Preserve sources. Build on prior work. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
 
 This is an operational skill, independent of the credo's long-horizon thinking exercises. It also applies to an explicitly requested near-term investigation. It does not require a paper-writing plan, journal entry, or research-direction interview.
 

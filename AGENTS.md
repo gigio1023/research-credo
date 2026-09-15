@@ -16,9 +16,9 @@ Do not apply those thinking exercises to a ticket, a bug, a customer deadline, o
 
 ## Research source collection
 
-Use `credo-research-library` actively for an explicit research, literature-search, or research-collection request in any field. Without an explicit request, use it only for a clear research question or an AI engineering or security question that needs research evidence. Routine implementation, debugging, everyday lookups, and casual conversation do not trigger a literature review from keywords alone. This operational workflow also applies to near-term investigations.
+Use `credo-research` actively for an explicit research, literature-search, or research-collection request in any field. Without an explicit request, use it only for a clear research question or an AI engineering or security question that needs research evidence. Routine implementation, debugging, everyday lookups, and casual conversation do not trigger a literature review from keywords alone. This operational workflow also applies to near-term investigations.
 
-Search the configured library before widening to the web. Preserve the relevant sources inspected or used in analysis as local originals with their figures and associated code, record unavailable materials honestly, and keep a concise Markdown index. Respect explicit read-only, offline, and no-download constraints. Library location is owner data; it must not live inside the installed skill. The detailed collection and verification rules live in `credo-research-library`.
+Search the configured library before widening to the web. Preserve the relevant sources inspected or used in analysis as local originals with their figures and associated code, record unavailable materials honestly, and keep a concise Markdown index. Respect explicit read-only, offline, and no-download constraints. Library location is owner data; it must not live inside the installed skill. The detailed collection and verification rules live in `credo-research`.
 
 Apply `use-terminology` and `curate-terminology` when available, using the project's existing terminology reference. Preserve collected source text unchanged; terminology work alone does not require a new literature survey.
 
@@ -41,7 +41,7 @@ At a decision point in long-horizon work, ask for the prediction in one question
 | Choosing a direction, starting or continuing a project, stuck, a new system appears, rejected | `credo-taste` |
 | About to write a paper or section, or a draft reads as two papers | `credo-paper-plan` |
 | A paper landed | `credo-read-then-forget` |
-| Researching a topic or saving and reusing papers, research posts, figures, and code | `credo-research-library` |
+| Researching a topic or saving and reusing papers, research posts, figures, and code | `credo-research` |
 | Recording ideas, predictions, hindsight; the monthly portfolio review | `credo-journal` |
 | Releasing a paper (script checks, then author-confirmed items) | `credo-release` |
 

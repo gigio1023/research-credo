@@ -9,7 +9,7 @@ Agent skills for choosing research questions, developing judgment, and keeping s
 | Skill | Use it to |
 | --- | --- |
 | [credo-taste](skills/credo-taste/SKILL.md) | Choose a direction and decide whether to continue, pivot, or stop. |
-| [credo-research-library](skills/credo-research-library/SKILL.md) | Research a topic and preserve papers, posts, figures, and code with a small Markdown index. |
+| [credo-research](skills/credo-research/SKILL.md) | Investigate questions, preserve sources, and build on prior work. |
 | [credo-read-then-forget](skills/credo-read-then-forget/SKILL.md) | Read a paper without inheriting its assumptions. |
 | [credo-paper-plan](skills/credo-paper-plan/SKILL.md) | Define the idea, reader, argument, and figures before drafting. |
 | [credo-journal](skills/credo-journal/SKILL.md) | Record ideas and predictions, then revisit them when results arrive. |
@@ -17,7 +17,7 @@ Agent skills for choosing research questions, developing judgment, and keeping s
 
 Thinking exercises apply to long-horizon research. Source collection also supports short investigations: explicit research requests trigger it; routine coding and casual lookups do not.
 
-## Research library
+## Research
 
 Search saved material first, then fill gaps through Hugging Face paper tools and the web. Keep originals in `research/`, with one folder per work and a concise `index.md`. No database or background service.
 
