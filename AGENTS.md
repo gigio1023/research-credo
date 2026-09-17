@@ -1,57 +1,52 @@
 # Research credo
 
-Standing instructions for agents working with the owner on research. Copy this file's sections into a project's `AGENTS.md` (Codex and other harnesses) and reference or paste it in `CLAUDE.md` (Claude Code), then fill in the owner settings at the bottom. The skills in `skills/` carry the detailed moves; this file is what applies in every conversation without being invoked.
+Guidance for work in this repository, and an optional source to adapt into a research project's instructions when the user requests setup. Installing skills alone does not activate every method or journal habit. Project preferences and records belong with the project, outside installed skill packages.
 
-Adapted from Nicholas Carlini's essay [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html) (2026). Paraphrased; read the original.
+The original research judgment and writing ideas were independently adapted from Nicholas Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html). The experimental, dataset, and measurement methods have their own source notes.
 
-## Scope: long-horizon thinking
+## Choose the method for the question
 
-Apply the credo's thinking stances and journal habit only to work that is long-horizon. All three must hold:
+Research judgment can matter in a one-day investigation or a year-long project. Duration does not determine whether a question deserves evidence. Use the relevant method within the requested work; routine implementation does not automatically trigger a literature review, interview, or journal entry.
 
-- Its outcome is a claim, a capability, or a direction whose value is uncertain, not a delivery whose shape is already specified.
-- Its horizon is a quarter or longer, or it is a multi-month improvement of something the owner is responsible for.
-- No external deadline inside the next few weeks decides it.
-
-Do not apply those thinking exercises to a ticket, a bug, a customer deadline, or this week's task; do that work well and move on. When the horizon is unclear and a thinking exercise would help, ask whether this is long-horizon work or a near-term deliverable. The near-term exclusions listed in the owner settings below are never long-horizon. Research source collection has its own scope below and does not require this interview.
-
-## Research source collection
-
-Use `credo-research` actively for an explicit research, literature-search, or research-collection request in any field. Without an explicit request, use it only for a clear research question or an AI engineering or security question that needs research evidence. Routine implementation, debugging, everyday lookups, and casual conversation do not trigger a literature review from keywords alone. This operational workflow also applies to near-term investigations.
-
-Search the configured library before widening to the web. Preserve the relevant sources inspected or used in analysis as local originals with their figures and associated code, record unavailable materials honestly, and keep a concise Markdown index. Respect explicit read-only, offline, and no-download constraints. Library location is owner data; it must not live inside the installed skill. The detailed collection and verification rules live in `credo-research`.
-
-Apply `use-terminology` and `curate-terminology` when available, using the project's existing terminology reference. Preserve collected source text unchanged; terminology work alone does not require a new literature survey.
-
-## Stances held in every long-horizon conversation
-
-1. Conclusion before plan. Before proposing experiments or a roadmap, ask what the best-case conclusion would say if everything worked. If it says nothing beyond "the number went up", say so.
-2. Reasons, not scores. Judge ideas by how many months they put the owner ahead of the next person, whether the field is doing something the owner finds obviously wrong, and whether this is a corner where the owner is unusually strong. Never produce a weighted score or a rubric total.
-3. Name the pull of the new. When a new idea is proposed over one in progress, say that new ideas always look better than the one lived with for months, then ask what specifically makes the new one more important.
-4. No prose before the plan. Do not draft paper text until the reader and the one idea are stated. The default reader is the owner six months ago. The agent plans and critiques; the owner drafts.
-5. Samples, not verdicts. A rejection, a null result, or a lost award is one sample from a distribution the owner does not control. Redirect to what they control: which problems, how well executed, how clearly written.
-
-## Habit the agent keeps for the owner
-
-At a decision point in long-horizon work, ask for the prediction in one question (why this will work, what would kill it, what a skeptical reviewer will ask) and record it in the journal (`credo-journal`). When an outcome or a review arrives, bring the old prediction back before discussing the outcome.
-
-## Where the detailed moves live
-
-| Moment | Skill |
+| Work | Skill |
 | --- | --- |
-| Choosing a direction, starting or continuing a project, stuck, a new system appears, rejected | `credo-taste` |
-| About to write a paper or section, or a draft reads as two papers | `credo-paper-plan` |
-| A paper landed | `credo-read-then-forget` |
-| Researching a topic or saving and reusing papers, research posts, figures, and code | `credo-research` |
-| Recording ideas, predictions, hindsight; the monthly portfolio review | `credo-journal` |
-| Releasing a paper (script checks, then author-confirmed items) | `credo-release` |
+| Choose, continue, pivot, or stop a consequential research direction | `credo-taste` |
+| Gather and preserve literature and other research sources | `credo-research` |
+| Read a paper for a stated purpose and inspect inherited assumptions | `credo-read-then-forget` |
+| Design, run, and interpret an experiment or training comparison | `credo-experiment` |
+| Construct or review a dataset and its labels, splits, and suitability | `credo-dataset` |
+| Design, build, or review a benchmark, metrics, scoring, and comparisons | `credo-evaluation` |
+| Operate an approved campaign across attempts and sessions | `evaluation-operations` |
+| Reconstruct context from authorized internal sources | `internal-source-research` |
+| Plan or critique a paper's argument and figures | `credo-paper-plan` |
+| Record meaningful ideas, predictions, and hindsight when requested | `credo-journal` |
+| Check a paper before submission or release | `credo-release` |
 
-## Owner settings (edit per project)
+Use existing decisions and evidence before asking another question. A user chooses purpose, tradeoffs, and authority; an empirical unknown may require an experiment. A finding, rejected hypothesis, unsuitable dataset, or unresolved comparison can be a useful result without a code change.
 
-These are the owner's data and live here, not inside the installed skills, so a reinstall does not erase them.
+## Work and continuity
+
+State the question and the decision the work could change. Select a credible comparison and assessment appropriate to that question; do not demand novelty or publication claims for every useful applied improvement. Preserve actual results, relevant conditions, and interpretation in existing project records. Give the reader the explanation needed for this decision without reciting every possible qualification.
+
+Quick checks within the same question and authorized resources can proceed. Ask before a new direction or a newly proposed long activity, such as work expected to take two or three days or more, unless that work is already authorized. Short duration does not grant new spending, data access, or external actions. Honor an existing resource budget and stop condition.
+
+For cross-session purpose, constraints, current understanding, and adaptive plans, use the project's existing records or requested Gigio Pack workflow. Do not create a second project state system here. For document production, use the requested writing method; paper planning does not prohibit prose the user separately asks the agent to draft.
+
+## Source collection
+
+`credo-research` applies actively to explicit research, literature-search, or collection requests. Otherwise use it only for a clear research question that needs external evidence. Search the configured library before expanding it, preserve inspected originals and useful associated material, and record access gaps. Respect read-only, offline, and no-download constraints. Terminology tools, when available, use the project's accepted terms without altering collected originals.
+
+## Maintaining this repository
+
+Keep each skill independently usable with colocated references and resources. Method boundaries should prevent duplicate ownership without forcing every task through all skills. Keep private transcripts, credentials, datasets, and project examples out of published packages. Use synthetic examples or explicitly authorized public sources.
+
+Validate changed packages, resource links, names, and discovery. Static package checks and illustrative walkthroughs do not establish improved model behavior. Do not launch paid or long behavioral trials merely to maintain instructions.
+
+## Owner settings (adapt per project)
 
 - Journal path: `~/research/journal.md`
-- Research library path: `research/` relative to the project root; use an existing configured collection first, or `~/research/` without a project
-- Near-term exclusions this quarter (never treated as long-horizon): none listed
-- Comparative advantage, in one sentence (tenet T6): not yet written
-- Tenets I hold differently or have not decided (by number, with the change): T13 timeboxing, undecided
-- Reader I write for by default: myself six months ago
+- Research library: existing configured collection first; otherwise `research/` within a project or `~/research/` without one
+- Reader for paper planning, unless specified: myself six months ago
+- Comparative advantage: not yet written
+- Tenets held differently or undecided: T13 timeboxing, undecided
+- Journal capture and review schedule: only as requested or explicitly adopted by the project

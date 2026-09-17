@@ -1,6 +1,6 @@
 # Coverage of Carlini's checklist
 
-Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30) is a list the author runs before every release. Most of its items assume a person reading the paper. This table records which items `scripts/check_tex.py` checks (Phase A of credo-release), how, and which remain with the author (Phase B).
+Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30) is a list the author runs before every release. Most of its items assume a person reading the paper. This table records which items `scripts/check_tex.py` checks (Phase A of credo-release), how, and which need artifact inspection, current requirements, or author knowledge beyond that scanner.
 
 ## Automated by the script
 
@@ -18,14 +18,14 @@ Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writin
 
 Additions not in his list: the script follows `\input` and `\include` so multi-file papers are checked whole, and it strips comments so a TODO in a comment does not count.
 
-## Left to the author (Phase B)
+## Outside the bundled scanner
 
-These need a rendered PDF, the build itself, the call for papers, or knowledge the script does not have:
+These need a rendered PDF, the build itself, current venue requirements, or knowledge the script does not have. An agent may inspect available artifacts with suitable tools; only actual author answers count as author confirmation:
 
 - Visual layout: paragraphs ending with a single word on a new line; a single line stranded at the top of a page under a caption.
 - Captions understandable in near-isolation after late edits.
 - PDF rendered on another computer; fonts embedded; figures legible; Type 3 fonts absent when the venue cares.
-- Page count against the limit, including separate rules for appendix and references; page numbering per the call for papers; bibliography style; blind or non-blind rules; the anonymous author field convention at security venues.
+- Page count against the limit, including separate rules for appendix and references; page numbering per the call for papers; bibliography style; blind or non-blind rules; any anonymous author field required by the actual venue.
 - Author list complete; names and affiliations spelled correctly; author block does not break page one; copyright block added (camera-ready) or removed (arXiv); accepted-version template in use.
 - arXiv form: whether to strip comments before upload; names on the form match the paper; rendered arXiv PDF matches the local build.
 
