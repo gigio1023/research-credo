@@ -1,6 +1,6 @@
-# Manual checklist (Phase B)
+# Artifact and author checklist
 
-Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30). Only the items that need a person are here. Items a program can check (TODO markers, merge-conflict markers, doubled words, `..` and `??`, blind author names, abstract macros, commented-out acknowledgments, build-log words) are run by the script in Phase A; see coverage.md. Add new items with a date under "Added later".
+Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html) (2022-01-30). These items are outside the bundled text scanner. Inspect those supported by available tools; reserve author confirmation for human-only decisions or evidence the agent cannot access. Items a program can check (TODO markers, merge-conflict markers, doubled words, `..` and `??`, blind author names, abstract macros, commented-out acknowledgments, build-log words) are run by the script in Phase A; see coverage.md. Keep project-specific additions in an authorized project checklist.
 
 ## Every release
 
@@ -16,7 +16,7 @@ Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carli
 - Page numbering follows the call for papers.
 - Page count is within the limit, with separate rules for appendix and references versus content pages.
 - Bibliography style matches the venue.
-- For security venues, the author field reads like "anonymous submission #xyz", with varied formatting when submitting several papers.
+- Use the actual venue-required anonymous author field and submission identifier, if any; do not infer a format from the research field.
 
 ## Public release (camera-ready)
 
@@ -37,4 +37,4 @@ Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carli
 
 ## Added later
 
-Record date, mistake, and the check that would have caught it.
+When checklist maintenance is requested, record the date, mistake, and useful check in the project record.

@@ -1,6 +1,6 @@
 ---
 name: credo-taste
-description: "Think through a long-horizon research decision one question at a time: which problem is worth months, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for 'is this worth it', 'should I start this', 'this isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for this week's deliverables or tickets, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
+description: "Think through a consequential research-direction decision one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for 'is this worth it', 'should I start this', 'this isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for routine execution of a settled task, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
 ---
 
 # Credo: Taste
@@ -9,7 +9,7 @@ Outcome: the user states, in their own words, what they will do and why, after b
 
 ## Scope
 
-Long-horizon work only. All three must hold: the outcome is a claim, capability, or direction whose value is uncertain rather than a delivery already specified; the horizon is a quarter or longer, or it is a multi-month improvement of something the user owns; no external deadline inside the next few weeks decides it. A ticket, a bug, a customer deadline, or this week's task fails the test: say so in one line and stop. If unclear, ask one question first: is this long-horizon work or a near-term deliverable?
+Use for a consequential research-direction decision whose value or premise is uncertain. Duration alone does not decide: a short benchmark project can need a direction choice, while a long routine training job may not. Do not reopen a settled question or turn ordinary implementation into an interview. Infer the decision from context and ask only for missing human judgment.
 
 ## How the conversation runs
 
@@ -37,8 +37,8 @@ Stop rules: stop when the user can say what they will do and why; stop after abo
 
 Ask in order, one per turn, and stop early when an answer settles it.
 
-1. If every experiment turned out exactly as you hope, what does the conclusion say? If it is a number going up, ask what changes about how people think or build. If nothing, say this may be sound science but not the important project, and ask whether to reframe or stop.
-2. What is the one idea, in one sentence? An "and" means two projects; which one is this?
+1. If every experiment turned out exactly as you hope, what does the conclusion say? If it is a number going up, relate that improvement to the intended scientific or practical use. A meaningful applied improvement can be the goal; do not impose publication novelty on a product or engineering investigation.
+2. What is the central question or contribution? If several ideas compete for resources, identify their relationship and which one the current decision concerns; a conjunction alone does not mean two projects.
 3. Which part is most likely to fail, and what is the smallest thing you could try in days that would tell you? Weeks spent on the part already understood is the first finding.
 4. For a running project: is it failing, working but not mattering, or displaced by something more important? Apply the pull-of-the-new check above.
 5. What will you do: continue, kill, pivot, or de-risk first? If killing, what is salvaged: a workshop note, a post, or a journal entry.
@@ -57,4 +57,4 @@ This is analysis. Do not run attacks, query production systems adversarially, or
 
 ## Closing
 
-No fixed form. Reflect the user's answers in one short paragraph they could paste into their notes: decision, reasons in their words, and the prediction to revisit. Offer once to record it with credo-journal as a `prediction` entry.
+No fixed form. Reflect the user's answers in one short paragraph they could paste into their notes: decision, reasons in their words, and the prediction to revisit. Record a prediction through credo-journal when requested or already authorized. Preserve decisions in the project's existing context record when that maintenance is part of the task; do not start another interview or duplicate journal entry for every experiment.

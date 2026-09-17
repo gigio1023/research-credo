@@ -1,6 +1,6 @@
 ---
 name: credo-journal
-description: "Keep the record that trains research taste and run the monthly review on it: append ideas (problems worth solving), predictions made at decisions, hindsight when outcomes arrive, and a monthly review of the long-horizon portfolio (which one or two efforts could be great, what dies, months-ahead guesses). Use when an idea appears, a decision is made, a result or review comes back, or monthly and for 'what should I be working on'. Append-only through the bundled script. NOT for task tracking, meeting notes, or near-term deliverables."
+description: "Keep the record that trains research taste and run the monthly review on it: append ideas (problems worth solving), predictions made at decisions, hindsight when outcomes arrive, and a monthly review of the long-horizon portfolio (which one or two efforts could be great, what dies, months-ahead guesses). Use when the user requests recording or reviewing meaningful ideas, predictions, or hindsight, or an explicit project journal policy covers that work. Append-only through the bundled script. NOT for routine task tracking, meeting notes, or automatic entries for every run."
 ---
 
 # Credo: Journal
@@ -11,7 +11,7 @@ The habit extends Carlini's [ideas.txt](https://nicholas.carlini.com/writing/202
 
 ## Scope
 
-Long-horizon work only (an uncertain claim or direction, a quarter or longer or a multi-month improvement the user owns, no deadline inside the next few weeks). Near-term tasks do not go in.
+Record meaningful research ideas, direction decisions, and hindsight when the user requests it or the project has an explicit journal-maintenance policy. Significance, not a minimum number of months, determines relevance. Routine task progress and every individual run stay in their existing records.
 
 ## Locate the journal
 
@@ -37,8 +37,8 @@ Add `--path <file>` when the journal is not at the default location. The script 
 ## Rules that change behavior
 
 - Ideas record problems, not solutions. If the user brings a solution, ask what problem it would settle and record that first. Only ideas the user currently believes are good.
-- A prediction is taken at every decision a credo-taste conversation ends with. Ask for it in one question; do not draft it for the user.
-- When a result, review, or acceptance arrives, read the matching prediction back to the user before discussing the outcome, then append the hindsight in their words.
+- At a consequential decision, preserve the user's stated expectation and what would change it. Ask only if a missing prediction matters and journal work is authorized. Mark an agent-proposed prediction as a proposal; do not convert it into the user's belief.
+- For an authorized hindsight entry, compare the result with the relevant prediction and preserve the user's judgment separately from an agent interpretation. Do not force a journal interruption during ordinary result analysis.
 - Do not evaluate an idea at capture time. Append and return the user to their task.
 - Do not surface entries unprompted during ordinary work. The journal is read only when choosing what to do next and during the monthly review.
 
