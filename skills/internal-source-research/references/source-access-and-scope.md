@@ -1,6 +1,6 @@
 # Source Access and Scoped Retrieval
 
-Use this reference when deciding which source lanes to inspect, checking an access failure, or explaining why a result is incomplete. It describes a read-only research method, not a way to obtain access.
+Use this reference when deciding which sources to inspect, checking an access failure, or explaining why a result is incomplete. It describes a read-only research method, not a way to obtain access.
 
 ## Start from a narrow evidence plan
 
@@ -10,9 +10,9 @@ Start with named anchors and nearby context. Do not make a workspace-wide export
 
 ## Discover the relevant plugin or MCP route
 
-Start with appropriate tools already exposed in the session. When a source lane is missing or unclear, use the host's documented tool discovery and plugin inventory or catalog if available. For MCP, inspect safe server status and tool listings through supported interfaces. A tools-only MCP server may expose no resources: an empty resource list says nothing by itself about its tools or connection. A plugin may be discoverable in a catalog without being installed, or installed without being enabled or connected in this session.
+Start with appropriate tools already exposed in the session. When the access route to a source is missing or unclear, use the host's documented tool discovery and plugin inventory or catalog if available. For MCP, inspect safe server status and tool listings through supported interfaces. A tools-only MCP server may expose no resources: an empty resource list says nothing by itself about its tools or connection. A plugin may be discoverable in a catalog without being installed, or installed without being enabled or connected in this session.
 
-Inspect only services relevant to the question. For each requested Notion, GitHub, Linear, or Slack lane, establish the usable access route or name the unresolved state. Do not infer that a plugin or server is absent merely because its tools are not currently visible. If inventory or discovery is unavailable, say availability is unverified and continue the usable lanes.
+Inspect only services relevant to the question. For each requested Notion, GitHub, Linear, or Slack source, establish the usable access route or name the unresolved state. Do not infer that a plugin or server is absent merely because its tools are not currently visible. If inventory or discovery is unavailable, say availability is unverified and continue with the usable sources.
 
 Use status and metadata interfaces without dumping raw configuration, tokens, environment variables, or authentication stores. Do not invent plugin identifiers, MCP server names, commands, or flags. Installing a plugin, starting an unreviewed MCP command, connecting an account, and changing configuration or permissions are setup actions, not read-only discovery. Leave them as a specific prerequisite unless the user authorizes setup.
 
@@ -48,7 +48,7 @@ An empty result may reflect a narrow query, indexing delay, retention, an inacce
 
 Use relevant aliases, renamed workstreams, acronyms, or adjacent terms when an initial label could conceal decisive evidence. Add terms only when they can change the answer, and keep them within the approved source and time scope. Do not turn synonym expansion into an exhaustive vocabulary sweep.
 
-Treat an authorization or retrieval failure as coverage information. Continue with another authorized lane, look for an in-scope primary source, or leave the question unknown. Ask for a broader scope or access change only when the missing lane is necessary to the decision.
+Treat an authorization or retrieval failure as coverage information. Continue with another authorized access route, look for an in-scope primary source, or leave the question unknown. Ask for a broader scope or access change only when the missing source is necessary to the decision.
 
 ## Preserve provenance without over-sharing
 

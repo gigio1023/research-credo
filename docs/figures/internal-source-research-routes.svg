@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 572" width="720" height="572" role="img" aria-labelledby="title desc">
+  <title id="title">internal-source-research illustrative routes, before and after</title>
+  <desc id="desc">Before: the lead routes broad collection to Sonnet, difficult reading and synthesis to Opus, and a Codex slice to gpt-5.6-terra at max. After: the lead keeps difficult reading and synthesis, routes collection to Sonnet 5 at xhigh and a Codex slice to gpt-6-sol at xhigh, and a loaded model routing skill sets the exact model and effort.</desc>
+  <defs>
+    <marker id="arrow-ink" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse" overflow="visible">
+      <path d="M1 1 L7 4 L1 7" fill="none" stroke="#CCCCCC" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrow-accent" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse" overflow="visible">
+      <path d="M1 1 L7 4 L1 7" fill="none" stroke="#8386EB" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse" overflow="visible">
+      <path d="M1 1 L7 4 L1 7" fill="none" stroke="#929591" stroke-width="1.2"/>
+    </marker>
+  </defs>
+  <style>
+    .entity { font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 14px; fill: #FFFFFF; text-anchor: middle; }
+    .sub { font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 12px; fill: #CCCCCC; text-anchor: middle; }
+    .edge { font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 12px; fill: #CCCCCC; }
+    .panel { font-family: "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 12px; fill: #929591; letter-spacing: 0.04em; }
+    .hot-text { fill: #FFBDA1; }
+    .muted-text { fill: #929591; }
+    .box { fill: #0D0D0D; stroke: #CCCCCC; stroke-width: 1.2; }
+    .box-accent { fill: #0D0D0D; stroke: #8386EB; stroke-width: 1.2; }
+    .box-muted { fill: #0D0D0D; stroke: #929591; stroke-width: 1.2; stroke-dasharray: 2 2; }
+    .box-hot { fill: #0D0D0D; stroke: #FF9365; stroke-width: 1.2; }
+    .flow { fill: none; stroke: #CCCCCC; stroke-width: 1.2; }
+    .flow-accent { fill: none; stroke: #8386EB; stroke-width: 1.2; }
+    .flow-secondary { fill: none; stroke: #929591; stroke-width: 1.2; stroke-dasharray: 2 2; }
+    .rule { fill: none; stroke: #929591; stroke-width: 1.2; stroke-dasharray: 2 4; }
+  </style>
+  <rect width="720" height="572" rx="16" fill="#0D0D0D"/>
+  <text id="before-label" class="panel" x="24" y="36" text-anchor="start">BEFORE (main)</text>
+  <g id="before-lead-to-sonnet">
+    <path class="flow" d="M224 156 H236 V84 H471" marker-end="url(#arrow-ink)"/>
+    <text class="edge" x="354.0" y="76" text-anchor="middle">broad source collection</text>
+  </g>
+  <g id="before-lead-to-opus">
+    <path class="flow" d="M224 156 H471" marker-end="url(#arrow-ink)"/>
+    <text class="edge" x="354.0" y="148" text-anchor="middle">difficult reading, synthesis</text>
+  </g>
+  <g id="before-lead-to-terra">
+    <path class="flow" d="M224 156 H236 V228 H471" marker-end="url(#arrow-ink)"/>
+    <text class="edge" x="354.0" y="220" text-anchor="middle">bounded research slice</text>
+  </g>
+  <g id="before-lead">
+    <rect class="box" x="24" y="120" width="200" height="72" rx="16"/>
+    <text class="entity" x="124" y="142">lead</text>
+    <text class="sub" x="124" y="160">difficult reading</text>
+    <text class="sub" x="124" y="178">and synthesis</text>
+  </g>
+  <g id="before-sonnet">
+    <rect class="box" x="472" y="56" width="224" height="56" rx="16"/>
+    <text class="entity" x="584" y="79">Sonnet</text>
+    <text class="sub" x="584" y="97">Claude Code</text>
+  </g>
+  <g id="before-opus">
+    <rect class="box-hot" x="472" y="128" width="224" height="56" rx="16"/>
+    <text class="entity" x="584" y="151">Opus</text>
+    <text class="sub" x="584" y="169">Claude Code</text>
+  </g>
+  <g id="before-terra">
+    <rect class="box" x="472" y="200" width="224" height="56" rx="16"/>
+    <text class="entity" x="584" y="223">gpt-5.6-terra at max</text>
+    <text class="sub" x="584" y="241">Codex</text>
+  </g>
+  <path id="divider" class="rule" d="M24 288 H696"/>
+  <text id="after-label" class="panel" x="24" y="324" text-anchor="start">AFTER</text>
+  <g id="after-lead-to-sonnet5">
+    <path class="flow" d="M224 408 H236 V372 H471" marker-end="url(#arrow-ink)"/>
+    <text class="edge" x="354.0" y="364" text-anchor="middle">broad source collection</text>
+  </g>
+  <g id="after-lead-to-sol">
+    <path class="flow" d="M224 408 H236 V444 H471" marker-end="url(#arrow-ink)"/>
+    <text class="edge" x="354.0" y="436" text-anchor="middle">bounded research slice</text>
+  </g>
+  <g id="after-lead">
+    <rect class="box" x="24" y="372" width="200" height="72" rx="16"/>
+    <text class="entity" x="124" y="394">lead</text>
+    <text class="sub" x="124" y="412">difficult reading</text>
+    <text class="sub" x="124" y="430">and synthesis</text>
+  </g>
+  <g id="after-sonnet5">
+    <rect class="box-accent" x="472" y="344" width="224" height="56" rx="16"/>
+    <text class="entity" x="584" y="367">Sonnet 5 at xhigh</text>
+    <text class="sub" x="584" y="385">Claude Code</text>
+  </g>
+  <g id="after-sol">
+    <rect class="box-accent" x="472" y="416" width="224" height="56" rx="16"/>
+    <text class="entity" x="584" y="439">gpt-6-sol at xhigh</text>
+    <text class="sub" x="584" y="457">Codex</text>
+  </g>
+  <g id="after-routing-skill">
+    <rect class="box-accent" x="24" y="504" width="240" height="56" rx="16"/>
+    <text class="entity" x="144" y="527">fable5-model-routing</text>
+    <text class="sub" x="144" y="545">or gpt6-astra-model-routing</text>
+  </g>
+  <g id="after-routing-to-lead">
+    <path class="flow-secondary" d="M114 504 V445" marker-end="url(#arrow-muted)"/>
+    <text class="edge" x="126" y="470" text-anchor="start">when loaded: exact</text>
+    <text class="edge" x="126" y="486" text-anchor="start">model and effort</text>
+  </g>
+</svg>

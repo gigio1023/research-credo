@@ -15,7 +15,7 @@ description: >
 
 Investigate questions. Preserve sources. Build on prior work. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
 
-This is an operational skill, independent of the credo's long-horizon thinking exercises. It also applies to an explicitly requested near-term investigation. It does not require a paper-writing plan, journal entry, or research-direction interview.
+This is an operational skill, independent of the credo's thinking exercises. It also applies to an explicitly requested near-term investigation. It does not require a paper-writing plan, journal entry, or research-direction interview.
 
 ## Decide whether to investigate
 
