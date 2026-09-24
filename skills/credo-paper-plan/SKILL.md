@@ -25,4 +25,4 @@ Paper planning applies to short or long research efforts and near-term deadlines
 
 Read a draft against the intended reader and argument. Identify concrete mismatches and their effect; preserve claims and evidence strength. A critique can recommend changes without rewriting unrequested prose.
 
-Return the useful outline, storyboard, or critique. Stop at planning when that is the request. If the user also asks for drafting, continue within that authorization, using `technical-report-writing` when available for production; the skill's ownership of planning does not reserve all prose for the human. Submission checks belong to `credo-release`.
+Return the useful outline, storyboard, or critique. Stop at planning when that is the request. If the user also asks for drafting, continue within that authorization, using `copydesk` when available for production; the skill's ownership of planning does not reserve all prose for the human. Submission checks belong to `credo-release`.

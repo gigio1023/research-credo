@@ -1,6 +1,6 @@
 ---
 name: credo-taste
-description: "Think through a consequential research-direction decision one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for 'is this worth it', 'should I start this', 'this isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for routine execution of a settled task, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
+description: "Think through a consequential research-direction decision one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for research-direction questions such as 'is this research direction worth it', 'should I start this project', 'this line of research isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for routine execution of a settled task, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
 ---
 
 # Credo: Taste
