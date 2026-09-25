@@ -34,7 +34,7 @@ For cross-session purpose, constraints, current understanding, and adaptive plan
 
 ## Source collection
 
-`credo-research` applies actively to explicit research, literature-search, or collection requests. Otherwise use it only for a clear research question that needs external evidence. Search the configured library before expanding it, preserve inspected originals and useful associated material, and record access gaps. Respect read-only, offline, and no-download constraints. Terminology tools, when available, use the project's accepted terms without altering collected originals.
+`credo-research` applies actively to explicit research, literature-search, or collection requests. Otherwise use it only when a decision needs evidence from papers or technical research posts; a general lookup, a vendor comparison, or a document task is not a research question because it says "investigate". Search the configured library before expanding it, preserve inspected originals and useful associated material, and record access gaps. Respect read-only, offline, and no-download constraints. Terminology tools, when available, use the project's accepted terms without altering collected originals.
 
 ## Maintaining this repository
 
