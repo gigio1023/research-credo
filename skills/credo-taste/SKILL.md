@@ -1,6 +1,6 @@
 ---
 name: credo-taste
-description: "Think through a consequential research-direction decision one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), what a new system or dataset could break, and how to read a rejection. Use for research-direction questions such as 'is this research direction worth it', 'should I start this project', 'this line of research isn't working', 'is there an attack here'. Reasons in prose, no scores. NOT for routine execution of a settled task, for planning paper text (credo-paper-plan), or for reading a paper (credo-read-then-forget)."
+description: "Think through a consequential research-direction decision one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, riskiest sub-problem, continue / kill / pivot), and how to read a rejection. Use for research-direction questions such as 'is this research direction worth it', 'should I start this project', 'this line of research isn't working'. Reasons in prose, no scores. NOT for routine execution of a settled task, for planning paper text (credo-paper-plan), for reading a paper (credo-read-then-forget), or for a direction decided inside an organization and the failure-mode pass on a new system (praxis-direction)."
 ---
 
 # Credo: Taste
@@ -9,7 +9,7 @@ Outcome: the user states, in their own words, what they will do and why, after b
 
 ## Scope
 
-Use for a consequential research-direction decision whose value or premise is uncertain. Duration alone does not decide: a short benchmark project can need a direction choice, while a long routine training job may not. Do not reopen a settled question or turn ordinary implementation into an interview. Infer the decision from context and ask only for missing human judgment.
+Use for a consequential research-direction decision whose value or premise is uncertain. Duration alone does not decide: a short benchmark project can need a direction choice, while a long routine training job may not. Do not reopen a settled question or turn ordinary implementation into an interview. Infer the decision from context and ask only for missing human judgment. For a direction decided inside an organization, where the result is a product or capability decision rather than a paper, use praxis-direction.
 
 ## How the conversation runs
 
@@ -28,7 +28,7 @@ Stop rules: stop when the user can say what they will do and why; stop after abo
 | Looking for a problem | What in this literature makes you want to shout that everyone is doing it wrong? If you do not do this, how many months until someone else does? Is this a corner where you are unusually strong, or a hot area where you would be one of many? |
 | Starting or continuing one project | Run the gate below. |
 | Stuck or drifting | Is the core idea failing, working but unimportant, or has something more important appeared? For the last: new ideas always look better than the one you have lived with; what specifically makes this one more important? What would you salvage if you killed it today? |
-| A new system, dataset, API, or agent appears | Run the failure-mode pass below. |
+| A new system, dataset, API, or agent appears | Hand off to praxis-direction, which owns the failure-mode pass and its fixed list. |
 | Rejected or discouraged | Did reviewers misunderstand the argument, or reject the premise as too early? Most of his awarded papers were rejected first. What in the writing would make a confused reviewer understand? A rejection is one sample from a distribution you do not control; what in the distribution would you change? |
 | Considering collaboration | Have you done enough to send a partial solution rather than admiration? Are you hiding the idea from people who could help, and why? Ideas are cheap; execution is hard. |
 | About to write | Hand off to credo-paper-plan. |
@@ -44,16 +44,6 @@ Ask in order, one per turn, and stop early when an answer settles it.
 5. What will you do: continue, kill, pivot, or de-risk first? If killing, what is salvaged: a workshop note, a post, or a journal entry.
 
 When a project is ending well, ask once more: is there an obvious experiment, domain, or objection a reader will wish you had addressed? If yes it belongs in this paper; small follow-ups can stay open.
-
-## The failure-mode pass for a new system
-
-Carlini's habit is to check every new system against the same fixed list of bad things and accept that most checks find nothing. Read [references/threat-list.md](references/threat-list.md) for the ten items and the row format, then:
-
-1. Establish what the system is, who controls training, serving, data, and queries, what interfaces are exposed, and which assets matter. Mark unknowns and proceed.
-2. Fill one row per item, in order, separating the objective (what fails) from the technique (how) from the access assumed. Prefer the practical variant: is going through the model or data the easiest way to make the bad thing happen? "None known" for prior work means you did not find one.
-3. Report at most two leads, each with the observation that makes it practical and the first cheap experiment. If nothing applies, say so in one sentence. Add a disclosure note when a lead is real: patchable by the owner or not.
-
-This is analysis. Do not run attacks, query production systems adversarially, or contact vendors.
 
 ## Closing
 
