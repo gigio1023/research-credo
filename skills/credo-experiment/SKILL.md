@@ -17,6 +17,8 @@ Recover the question, existing results, relevant model and data, and constraints
 
 Choose the smallest comparison that can answer this round's question. Specify the changed factor, the baseline, comparison conditions, meaningful outputs, and the reason the comparison is informative. Tune nuisance settings fairly when they interact with the factor under study; identical settings are not always a fair comparison. Distinguish exploratory selection from a confirmatory comparison.
 
+With little compute, iterate at the smallest model and data scale at which the phenomenon still appears, and say so when a result may not transfer to full scale. With little data, spend it on evaluation before training: a few hundred labeled examples usually buy a credible measurement and rarely a credible fine-tune. State what the available count supports before designing the comparison.
+
 Keep future experiments conditional on the findings. Use the project's existing plan or a compact experiment note; do not create a mandatory new tracking framework. Read [design and interpretation](references/design-and-interpretation.md) for ambiguous baselines, interactions, variance, or inconclusive outcomes.
 
 ## Train or execute within the grant
@@ -25,7 +27,7 @@ A design or review request does not authorize training. For requested execution,
 
 Before an expensive run, use an authorized small check to establish that data reach the intended computation, losses and gradients behave plausibly, checkpoint save/load works, and the requested measurements can be recovered. A successful smoke test establishes readiness only. Read [training and recovery](references/training-and-recovery.md) for execution decisions.
 
-Fast follow-up checks within the same research question and authorized resources may proceed. Present the observation and proposed change to the user before changing direction or starting long new work, such as two to three days or more, unless that activity is already authorized. Cost, data access, shared hardware, and external-provider limits still apply to short runs.
+Fast follow-up checks within the same research question and always-on resources may proceed. Present the observation, the proposed change, and one sentence predicting the result before changing direction, before any run that spends beyond the always-on tier or the project's stated budget, and before long new work, unless that activity is already authorized. Spend is the gate, not duration: a short run on paid accelerators needs the same presentation as a multi-day one. When the project has a praxis profile, its compute ladder and approval threshold define the tiers. Data access, shared hardware, and external-provider limits still apply to short runs.
 
 Keep enough identity to associate results with their actual inputs and configurations. Use existing experiment logs and checkpoints, preserve unsuccessful attempts, and inspect live state before restarting. Use evaluation-operations for an evaluation campaign's dispatch, resume, scoring state, and attempts; do not create a second campaign registry.
 

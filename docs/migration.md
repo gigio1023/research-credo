@@ -16,3 +16,7 @@ Merge this destination before the companion agent-skills change removes the two 
 Draft publication is not installation. Existing copies continue to exist at their installed paths, but old tracked source paths will no longer be update targets after migration. During a separately requested refresh, use `install-skill-pack` to select the published repository and revision, reinstall these exact names from the new source, and verify their source metadata and intended harness destinations. Do not rely on a same-name directory alone or manually edit installation lock files. Avoid discoverable duplicate compatibility packages.
 
 Existing project journals, libraries, run ledgers, and source archives remain project data. A skill refresh must preserve them and any user-customized installed content.
+
+## Threat list ownership
+
+The fixed list of ten failure modes moved from `skills/credo-taste/references/threat-list.md` to `skills/praxis-direction/references/threat-list.md` when the organization track was added. `credo-taste` hands the failure-mode pass to `praxis-direction`; an installation that carries only the paper track no longer includes the list.
