@@ -21,8 +21,12 @@ Research judgment can matter in a one-day investigation or a year-long project. 
 | Plan or critique a paper's argument and figures | `credo-paper-plan` |
 | Record meaningful ideas, predictions, and hindsight when requested | `credo-journal` |
 | Check a paper before submission or release | `credo-release` |
+| Sharpen an organizational agenda into a resourced bet, or run the failure-mode pass on a new system | `praxis-direction` |
+| Create or audit the organization's praxis profile | `praxis-setup` |
 
 Use existing decisions and evidence before asking another question. A user chooses purpose, tradeoffs, and authority; an empirical unknown may require an experiment. A finding, rejected hypothesis, unsuitable dataset, or unresolved comparison can be a useful result without a code change.
+
+Inside an organization, where the result is a product, customer, or capability decision rather than a paper, `praxis-direction` turns the agenda into a bet and `credo-taste` stays with paper directions. The organization's outcomes, compute ladder, experts, and data live in its own `praxis-profile.md`, written by `praxis-setup` in that workspace and never in this repository.
 
 ## Work and continuity
 
@@ -63,3 +67,4 @@ End-to-end path here: run each changed bundled script on a sample input, then di
 - Comparative advantage: not yet written
 - Tenets held differently or undecided: T13 timeboxing, undecided
 - Journal capture and review schedule: only as requested or explicitly adopted by the project
+- Praxis profile: none in this repository; `praxis-setup` writes one in the organization's workspace and links it from that project's instructions
