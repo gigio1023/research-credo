@@ -1,14 +1,15 @@
 ---
 name: credo-research
 description: >
-  Investigate a topic and keep the sources in a simple local research library.
-  Use actively for explicit research, literature-search, or research-collection
-  requests in any field. Without an explicit request, use only for a clear
-  research question or an AI engineering or security question that needs
-  research evidence. Save papers, research posts, figures, and associated code
-  under research/ with a concise Markdown index; search saved material first.
-  NOT for ordinary conversation, routine implementation/debugging, or everyday
-  lookups merely because an AI or security term appears.
+  Investigate a research question and keep the sources in a simple local
+  research library. Use when the user explicitly asks for a literature search,
+  a research survey, or to collect research sources, or names credo research;
+  otherwise only when a decision needs evidence from papers or technical
+  research posts. Save papers, posts, figures, and associated code under
+  research/ with a concise Markdown index; search saved material first. NOT for
+  general web lookups, product or vendor comparisons, brainstorming, transcript
+  capture, issue cleanup, or document restructuring, even when the request says
+  "investigate".
 ---
 
 # Research
@@ -21,7 +22,7 @@ This is an operational skill, independent of the credo's thinking exercises. It 
 
 An explicit request to research, survey literature, compare research approaches, or collect research sources authorizes active investigation and local source preservation within that topic. Infer the question and useful depth from the request, then pursue the primary evidence needed to answer it. An explicit offline, read-only, no-download, or no-research constraint takes precedence.
 
-Without an explicit request, start only when the task presents a clear research question, or when evidence from research would materially resolve an AI engineering or security question. Ordinary implementation, troubleshooting, terminology lookup, product search, and casual conversation do not become literature reviews from keywords alone. If that gate is not met, continue the original task without activating this workflow. When it is met without an explicit request, save into an existing library only; otherwise report the sources and offer to start one rather than creating `research/` in the project unasked. Ordinary fact checking required by the task remains ordinary fact checking.
+Without an explicit request, start only when a decision in the task needs evidence from papers or technical research posts and that evidence would change the answer. The word "investigate" alone does not meet the gate: a general web lookup, a product or vendor comparison, brainstorming a design, capturing a transcript, cleaning up issues, or restructuring a document stays with its own task even when it mentions a model, a benchmark, or a security term. Ordinary implementation, troubleshooting, terminology lookup, and casual conversation do not become literature reviews from keywords alone. If the gate is not met, continue the original task without activating this workflow. When it is met without an explicit request, save into an existing library only; otherwise report the sources and offer to start one rather than creating `research/` in the project unasked. Ordinary fact checking required by the task remains ordinary fact checking.
 
 For a substantial investigation, state the question and the decision the evidence should inform. Stop searching when that question is supported by adequate primary evidence and the important disagreements or gaps are bounded. Do not turn a narrow question into a field-wide survey.
 
