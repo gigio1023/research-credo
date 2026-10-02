@@ -6,13 +6,13 @@ description: >
   capability with current and target numbers, the intervention and the
   question it answers, the cheapest discriminating test, a compute ladder with
   a spend gate, and the in-house expert and data to use. Reads the
-  organization's praxis profile when present. Use when a direction arrives as
-  an agenda ("improve X capability", "we should work on Y"), when choosing what
-  to work on next inside a company, or when a new system, dataset, or agent
-  appears and the question is whether anything there is worth a bet. Output is
-  a Goal block for the project's plan. NOT for paper-direction decisions
-  (credo-taste), running experiments (credo-experiment), or writing the profile
-  (praxis-setup).
+  organization's praxis profile when present. Use when the user asks to turn
+  an agenda ("improve X capability", "we should work on Y") into a bet, names
+  praxis-direction, or asks whether a new system, dataset, or agent holds
+  anything worth a bet. Output is a Goal block for the project's plan. NOT for
+  ordinary task planning, a ticket, work whose bet is already set, a new
+  release mentioned in passing, paper-direction decisions (credo-taste),
+  running experiments (ml-experiment), or writing the profile (praxis-setup).
 ---
 
 # Praxis: Direction
@@ -23,7 +23,7 @@ Outcome: the user can state one bet in their own words: the organizational outco
 
 Use when a research direction is decided inside an organization and the result is a product, customer, or capability decision rather than a paper. A direction usually arrives as an agenda: "improve X capability", "we should look into Y", "the team needs Z". An agenda names an area; a bet names a number, an intervention, and a cost. This skill turns the first into the second.
 
-Do not reopen a settled bet or turn ordinary implementation into an interview. For a paper-direction decision use credo-taste; both have a gate, but they answer to different readers.
+The gate runs on a request: the user asks for a bet, or choosing what to pursue is itself the task. An agenda or a new model release mentioned in passing is not that request. Do not reopen a settled bet or turn ordinary implementation into an interview. For a paper-direction decision use credo-taste; both have a gate, but they answer to different readers.
 
 ## The profile
 

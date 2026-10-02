@@ -20,3 +20,16 @@ Existing project journals, libraries, run ledgers, and source archives remain pr
 ## Threat list ownership
 
 The fixed list of ten failure modes moved from `skills/credo-taste/references/threat-list.md` to `skills/praxis-direction/references/threat-list.md` when the organization track was added. `credo-taste` hands the failure-mode pass to `praxis-direction`; an installation that carries only the paper track no longer includes the list.
+
+## Method skill rename
+
+The four method skills left the `credo-` prefix when the paper track regained its scope test. The prefix now marks the essay's skills; the methods carry ordinary research and ML practice and are meant to be selected in everyday work.
+
+| Previous name | New name |
+| --- | --- |
+| `credo-experiment` | `ml-experiment` |
+| `credo-dataset` | `ml-dataset` |
+| `credo-evaluation` | `evaluation-design` |
+| `credo-research` | `literature-research` |
+
+Content and references move unchanged apart from cross-references. A refresh installs the new names and removes the previous four; project libraries under `research/` and existing experiment records stay where they are.

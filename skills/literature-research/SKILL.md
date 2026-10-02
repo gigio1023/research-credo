@@ -1,9 +1,9 @@
 ---
-name: credo-research
+name: literature-research
 description: >
   Investigate a research question and keep the sources in a simple local
   research library. Use when the user explicitly asks for a literature search,
-  a research survey, or to collect research sources, or names credo research;
+  a research survey, or to collect research sources, or names literature-research;
   otherwise only when a decision needs evidence from papers or technical
   research posts. Save papers, posts, figures, and associated code under
   research/ with a concise Markdown index; search saved material first. NOT for
@@ -12,11 +12,11 @@ description: >
   "investigate".
 ---
 
-# Research
+# Literature Research
 
 Investigate questions. Preserve sources. Build on prior work. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
 
-This is an operational skill, independent of the credo's thinking exercises. It also applies to an explicitly requested near-term investigation. It does not require a paper-writing plan, journal entry, or research-direction interview.
+It serves a near-term investigation as well as a paper and does not require a paper plan, journal entry, or research-direction interview.
 
 ## Decide whether to investigate
 
@@ -73,6 +73,6 @@ After saving, update the existing row rather than adding a duplicate. Re-read th
 
 ## Deliver the answer
 
-Lead with the answer supported by the evidence. Distinguish source claims, your interpretation, and what remains unknown. Cite original sources and provide the local index path so the next session can retrieve the same material. Mention material collection gaps and reading limits; do not describe a partial snapshot as a complete archive. Source collection does not imply experiment execution or reproduction. Connect a consequential finding to the existing project question and next decision when relevant, without creating a separate tracking system. Use credo-experiment for a requested experiment, credo-dataset for data construction or review, and credo-evaluation for measurement design; their methods do not need a literature survey when the inputs already suffice.
+Lead with the answer supported by the evidence. Distinguish source claims, your interpretation, and what remains unknown. Cite original sources and provide the local index path so the next session can retrieve the same material. Mention material collection gaps and reading limits; do not describe a partial snapshot as a complete archive. Source collection does not imply experiment execution or reproduction. Connect a consequential finding to the existing project question and next decision when relevant, without creating a separate tracking system. Use ml-experiment for a requested experiment, ml-dataset for data construction or review, and evaluation-design for measurement design; their methods do not need a literature survey when the inputs already suffice.
 
 Finish when the question is answered to the requested depth, each retained work's expected materials are saved or have an explicit collection gap, and the index links have been checked. Any completeness statement applies only to that artifact set checked on that date, not the whole literature or all future versions. If source access or filesystem writes are unavailable, give the supported answer and state exactly what could not be read or saved.

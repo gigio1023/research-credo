@@ -2,27 +2,31 @@
 
 Guidance for work in this repository, and an optional source to adapt into a research project's instructions when the user requests setup. Installing skills alone does not activate every method or journal habit. Project preferences and records belong with the project, outside installed skill packages.
 
-The original research judgment and writing ideas were independently adapted from Nicholas Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html). The experimental, dataset, and measurement methods have their own source notes.
+The repository holds three tracks with different readers. The `credo-` skills are adapted from Nicholas Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html); four of them form the paper track, which answers to a reader and a venue. The method skills are ordinary research and ML practice for any task that needs them and carry their own source notes. The organization track answers to a decision a company must make with the compute, data, and experts it has.
 
-## Choose the method for the question
+## Paper track scope
 
-Research judgment can matter in a one-day investigation or a year-long project. Duration does not determine whether a question deserves evidence. Use the relevant method within the requested work; routine implementation does not automatically trigger a literature review, interview, or journal entry.
+Apply `credo-taste`, `credo-paper-plan`, `credo-journal`, and `credo-release` only when the work is aimed at a paper or a publishable research claim. Within that scope the essay's bar holds unsoftened: one idea, a best-case conclusion that says more than a number went up, a result months ahead of the next person, and effort a reasonable person would not spend. A ticket, a bug, a customer deadline, a product evaluation, or this week's task is out of scope even when it involves a model, a benchmark, or the word research; do that work well with the method skills and move on. When it is unclear whether the work aims at a paper, ask that one question first.
 
-| Work | Skill |
-| --- | --- |
-| Choose, continue, pivot, or stop a consequential research direction | `credo-taste` |
-| Gather and preserve literature and other research sources | `credo-research` |
-| Read a paper for a stated purpose and inspect inherited assumptions | `credo-read-then-forget` |
-| Design, run, and interpret an experiment or training comparison | `credo-experiment` |
-| Construct or review a dataset and its labels, splits, and suitability | `credo-dataset` |
-| Design, build, or review a benchmark, metrics, scoring, and comparisons | `credo-evaluation` |
-| Operate an approved campaign across attempts and sessions | `evaluation-operations` |
-| Reconstruct context from authorized internal sources | `internal-source-research` |
-| Plan or critique a paper's argument and figures | `credo-paper-plan` |
-| Record meaningful ideas, predictions, and hindsight when requested | `credo-journal` |
-| Check a paper before submission or release | `credo-release` |
-| Sharpen an organizational agenda into a resourced bet, or run the failure-mode pass on a new system | `praxis-direction` |
-| Create or audit the organization's praxis profile | `praxis-setup` |
+`credo-taste` and `credo-journal` run only on the user's request, because an unrequested run either interviews the user or writes to the user's journal. Harness adapters keep them out of automatic selection: `disable-model-invocation` in the Claude Code frontmatter and `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for Codex. Each body states the same scope for harnesses without those controls. `credo-read-then-forget` keeps the prefix for its source, but a paper landing is its trigger, so it serves engineering work too.
+
+## Choose the skill
+
+| Track | Work | Skill |
+| --- | --- | --- |
+| Paper | Choose, continue, pivot, or stop a paper-bound research direction, on request | `credo-taste` |
+| Paper | Plan or critique a paper's argument and figures | `credo-paper-plan` |
+| Paper | Record research ideas, predictions, and hindsight, on request | `credo-journal` |
+| Paper | Check a paper before submission or release | `credo-release` |
+| Method | Read a paper for a stated purpose and inspect inherited assumptions | `credo-read-then-forget` |
+| Method | Gather and preserve literature and other research sources | `literature-research` |
+| Method | Design, run, and interpret an experiment or training comparison | `ml-experiment` |
+| Method | Construct or review a dataset and its labels, splits, and suitability | `ml-dataset` |
+| Method | Design, build, or review a benchmark, metrics, scoring, and comparisons | `evaluation-design` |
+| Method | Operate an approved campaign across attempts and sessions | `evaluation-operations` |
+| Method | Reconstruct context from authorized internal sources | `internal-source-research` |
+| Organization | Sharpen an agenda into a resourced bet when asked, or run the failure-mode pass on a new system | `praxis-direction` |
+| Organization | Create or audit the organization's praxis profile | `praxis-setup` |
 
 Use existing decisions and evidence before asking another question. A user chooses purpose, tradeoffs, and authority; an empirical unknown may require an experiment. A finding, rejected hypothesis, unsuitable dataset, or unresolved comparison can be a useful result without a code change.
 
@@ -30,7 +34,7 @@ Inside an organization, where the result is a product, customer, or capability d
 
 ## Work and continuity
 
-State the question and the decision the work could change. Select a credible comparison and assessment appropriate to that question; do not demand novelty or publication claims for every useful applied improvement. Preserve actual results, relevant conditions, and interpretation in existing project records. Give the reader the explanation needed for this decision without reciting every possible qualification.
+State the question and the decision the work could change. Select a credible comparison and assessment appropriate to that question. Novelty, months ahead, and publication claims belong to the paper track; method work does not borrow them. Preserve actual results, relevant conditions, and interpretation in existing project records. Give the reader the explanation needed for this decision without reciting every possible qualification.
 
 Quick checks within the same question and authorized resources can proceed. Ask before a new direction or a newly proposed long activity, such as work expected to take two or three days or more, unless that work is already authorized. Short duration does not grant new spending, data access, or external actions. Honor an existing resource budget and stop condition.
 
@@ -38,7 +42,7 @@ For cross-session purpose, constraints, current understanding, and adaptive plan
 
 ## Source collection
 
-`credo-research` applies actively to explicit research, literature-search, or collection requests. Otherwise use it only when a decision needs evidence from papers or technical research posts; a general lookup, a vendor comparison, or a document task is not a research question because it says "investigate". Search the configured library before expanding it, preserve inspected originals and useful associated material, and record access gaps. Respect read-only, offline, and no-download constraints. Terminology tools, when available, use the project's accepted terms without altering collected originals.
+`literature-research` applies actively to explicit research, literature-search, or collection requests. Otherwise use it only when a decision needs evidence from papers or technical research posts; a general lookup, a vendor comparison, or a document task is not a research question because it says "investigate". Search the configured library before expanding it, preserve inspected originals and useful associated material, and record access gaps. Respect read-only, offline, and no-download constraints. Terminology tools, when available, use the project's accepted terms without altering collected originals.
 
 ## Maintaining this repository
 

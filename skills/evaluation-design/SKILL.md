@@ -1,5 +1,5 @@
 ---
-name: credo-evaluation
+name: evaluation-design
 description: >
   Design, build, or review an evaluation method or benchmark: the capability
   being measured, task design, metrics, scorers, comparison conditions, and
@@ -7,7 +7,7 @@ description: >
   monitoring an already-approved evaluation campaign.
 ---
 
-# Credo: Evaluation
+# Evaluation Design
 
 Establish whether an evaluation measures the intended capability and supports the decision being made. A working runner and a high score do not establish benchmark validity.
 
@@ -27,7 +27,7 @@ Read [measurement and scoring](references/measurement-and-scoring.md) for metric
 - Inspect shortcuts, contamination, and ways to improve the score without improving the intended capability. A suspected shortcut calls for a test, not a claim that the benchmark is invalid.
 - Separate exploratory choices from assessment on material kept independent of those choices.
 
-Use credo-dataset for selection, annotation, and split changes. This skill owns what is measured and how scores are interpreted, not a duplicate data-construction procedure.
+Use ml-dataset for selection, annotation, and split changes. This skill owns what is measured and how scores are interpreted, not a duplicate data-construction procedure.
 
 ## Build and validate when requested
 

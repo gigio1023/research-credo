@@ -7,7 +7,7 @@ description: "Read a paper in a declared mode (scan for the one new thing, extra
 
 Outcome: deliver the requested reading result and, when useful, a short check of assumptions the user might otherwise inherit. A narrow extraction does not need an additional reflection.
 
-Scope: reading that supports the user's current research or engineering question. Use the assumption check when a paper's framing could change the approach, regardless of project duration. A narrow extraction can finish with the requested piece when broader reflection adds nothing.
+Scope: reading that supports the user's current research or engineering question. Use the assumption check when a paper's framing could change the approach. A narrow extraction can finish with the requested piece when broader reflection adds nothing.
 
 Adapted from the "Read all the papers" and "Ignore all the papers" sections of Carlini's essay.
 

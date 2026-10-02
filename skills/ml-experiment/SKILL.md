@@ -1,5 +1,5 @@
 ---
-name: credo-experiment
+name: ml-experiment
 description: >
   Design, run, or review a bounded research experiment or model-training
   comparison when asked to test an idea, improve a model, reproduce a result,
@@ -7,7 +7,7 @@ description: >
   dataset construction, benchmark-method design, or campaign status tracking.
 ---
 
-# Credo: Experiment
+# ML Experiment
 
 Turn a research question into a useful comparison, inspect what actually happened, and decide what the result supports. Work can finish with a negative finding or a bounded unresolved question. A trained checkpoint or higher score is not automatically a useful research conclusion.
 
@@ -33,7 +33,7 @@ Keep enough identity to associate results with their actual inputs and configura
 
 ## Interpret and continue
 
-Inspect the actual outputs, comparison conditions, and errors. Separate measured observations from explanations and untested expectations. Investigate an apparent improvement's plausible alternatives, such as changed data, selection on validation results, a different compute budget, or a broken scorer. Use credo-dataset or credo-evaluation when the relevant question concerns data or measurement.
+Inspect the actual outputs, comparison conditions, and errors. Separate measured observations from explanations and untested expectations. Investigate an apparent improvement's plausible alternatives, such as changed data, selection on validation results, a different compute budget, or a broken scorer. Use ml-dataset or evaluation-design when the relevant question concerns data or measurement.
 
 Report the result at its supported strength. Repetition or uncertainty estimates should answer a real decision question and respect dependence among observations; do not turn every experiment into a fixed seed-count ritual. An inconclusive difference is not equivalence.
 

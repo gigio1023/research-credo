@@ -1,5 +1,5 @@
 ---
-name: credo-dataset
+name: ml-dataset
 description: >
   Design, build, or review a training or evaluation dataset: sampling,
   selection, annotation, splits, provenance, leakage, and quality. Use for
@@ -7,7 +7,7 @@ description: >
   metrics, literature collection alone, or merely operating an evaluation run.
 ---
 
-# Credo: Dataset
+# ML Dataset
 
 Make the data fit its intended use and establish what its construction supports. A schema-valid collection is not necessarily a suitable dataset; a reviewed sample is not proof that every record is correct.
 
@@ -37,6 +37,6 @@ Use appropriate structural checks and actual content review. Check counts by the
 
 Deliver the requested version and usable documentation, or findings with representative examples and the implication for use. Preserve underlying data records without dumping their provenance into every reader-facing report. A negative suitability finding can finish a review without modifying the data.
 
-Use credo-evaluation for measurement and benchmark-method decisions, credo-experiment for downstream training comparisons, and evaluation-operations for running an approved evaluation. Reuse their established question rather than requiring a workflow through all three.
+Use evaluation-design for measurement and benchmark-method decisions, ml-experiment for downstream training comparisons, and evaluation-operations for running an approved evaluation. Reuse their established question rather than requiring a workflow through all three.
 
 Read [sources](references/sources.md) when maintaining the skill.
