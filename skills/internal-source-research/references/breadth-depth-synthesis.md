@@ -17,7 +17,7 @@ If a workstream has been renamed or is likely to use an acronym, expand to the f
 
 ## Read depth where it changes the decision
 
-Select depth reads because they can establish a decision, transition, constraint, implementation state, disagreement, or next work—not because they are easy to open. Read the relevant whole thread, complete document section, issue discussion, revision, or code context. A title, status, search excerpt, quoted fragment, or merge event may be a lead but is not automatically the conclusion.
+Select depth reads because they can establish a decision, transition, constraint, implementation state, disagreement, or next work, not because they are easy to open. Read the relevant whole thread, complete document section, issue discussion, revision, or code context. A title, status, search excerpt, quoted fragment, or merge event may be a lead but is not automatically the conclusion.
 
 When material is too large or inaccessible, record the exact unread boundary. Prefer a smaller complete context over a long sequence of snippets. Reuse a prior read and ask a targeted follow-up rather than repeatedly loading the same source.
 

@@ -7,7 +7,7 @@
 | `skills/productivity/internal-source-research/` in agent-skills | `skills/internal-source-research/` |
 | `skills/development/evaluation-operations/` in agent-skills | `skills/evaluation-operations/` |
 
-These packages were copied from the companion agent-skills writer branch at `ba51fcc1cecf2bfb64de39d907df21a14547cc9e`, retaining its reader-record improvements. Their earlier development remains in that repository's Git history. The three new `credo-experiment`, `credo-dataset`, and `credo-evaluation` packages separate experimental design, data suitability, and measurement; they do not duplicate campaign state management.
+These packages were copied from the companion agent-skills writer branch at `ba51fcc1cecf2bfb64de39d907df21a14547cc9e`, retaining its reader-record improvements. Their earlier development remains in that repository's Git history. The same change added `credo-experiment`, `credo-dataset`, and `credo-evaluation` for experimental design, data suitability, and measurement, without duplicating campaign state management; the consolidation below later merged them into `ml-research-methods`.
 
 ## Publication order
 
@@ -21,15 +21,17 @@ Existing project journals, libraries, run ledgers, and source archives remain pr
 
 The fixed list of ten failure modes moved from `skills/credo-taste/references/threat-list.md` to `skills/praxis-direction/references/threat-list.md` when the organization track was added. `credo-taste` hands the failure-mode pass to `praxis-direction`; an installation that carries only the paper track no longer includes the list.
 
-## Method skill rename
+## Consolidation into nine skills
 
-The four method skills left the `credo-` prefix when the paper track regained its scope test. The prefix now marks the essay's skills; the methods carry ordinary research and ML practice and are meant to be selected in everyday work.
+The paper track regained its scope test, and the skills outside it were consolidated where one task had several owners. The `credo-` prefix now marks exactly the paper track; the methods carry ordinary research and ML practice and are meant to be selected in everyday work.
 
-| Previous name | New name |
+| Previous skill | Now |
 | --- | --- |
-| `credo-experiment` | `ml-experiment` |
-| `credo-dataset` | `ml-dataset` |
-| `credo-evaluation` | `evaluation-design` |
+| `credo-experiment` | `ml-research-methods`, Experiment section |
+| `credo-dataset` | `ml-research-methods`, Dataset section |
+| `credo-evaluation` | `ml-research-methods`, Measurement section |
 | `credo-research` | `literature-research` |
+| `credo-read-then-forget` | `literature-research`, Read one paper section |
+| `praxis-setup` | `praxis-direction`, Set up or audit the profile section |
 
-Content and references move unchanged apart from cross-references. A refresh installs the new names and removes the previous four; project libraries under `research/` and existing experiment records stay where they are.
+The topical references moved unchanged into the absorbing package, and the three method source notes became one. A refresh installs the nine names and removes the six previous ones; project libraries under `research/`, journals, praxis profiles, and experiment records stay where they are.

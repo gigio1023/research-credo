@@ -1,0 +1,10 @@
+# Sources and Scope
+
+Reviewed September 17, 2026 while authoring the experiment, dataset, and measurement methods.
+
+- [Google Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook): inspected the initial-configuration, incremental-tuning, exploration, and experimental-goal sections. Adopted narrow informative rounds, separation of scientific and nuisance settings, and explicit compute tradeoffs. It assumes a working training pipeline and sufficient tuning resources; its batch-size and optimizer advice is not imposed on every architecture.
+- [Gebru et al., Datasheets for Datasets](https://arxiv.org/abs/1803.09010): inspected abstract and metadata. The stated motivation, composition, collection, and recommended-use framing informs concise dataset documentation. It does not require filling an entire datasheet for each small review.
+- [Ribeiro et al., Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://aclanthology.org/2020.acl-main.442/): inspected the publication page and abstract. Adopted the distinction between an aggregate score and task-relevant behavioral testing. The package uses the method as an option, not a requirement to reproduce CheckList's taxonomy or tooling.
+- [Kapoor and Narayanan, Leakage and the Reproducibility Crisis in ML-based Science](https://arxiv.org/abs/2207.07048): inspected abstract and publication metadata. It motivates explicit review of data dependence, leakage, and the information boundaries an evaluation claim relies on; this package does not claim to have reproduced the paper or its survey, or that a particular dataset is contaminated.
+
+The workflow, metric definitions, unit-of-analysis checks, scorer cases, and synthetic examples are independently authored. Runtime commands come from the actual project's implementation and version-specific framework documentation; a project supplies its own label rules, permitted data, and quality criteria. The sources do not establish that these instructions improve model behavior, and package validation does not establish dataset quality or any benchmark result.

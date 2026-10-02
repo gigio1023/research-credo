@@ -4,8 +4,8 @@ description: >
   Operate, resume, monitor, or reconstruct the evidence-backed state of a
   multi-run evaluation campaign. Use when approved evaluation work spans runs
   or sessions and its live progress, durable attempts, priorities, or results
-  must stay accurate. NOT for evaluation-method design, dataset building,
-  generic code review, or a one-off evaluation run.
+  must stay accurate. NOT for evaluation-method design or dataset building
+  (ml-research-methods), generic code review, or a one-off evaluation run.
 ---
 
 # Evaluation Operations

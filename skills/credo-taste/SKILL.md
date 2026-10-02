@@ -1,6 +1,6 @@
 ---
 name: credo-taste
-description: "For work aimed at a paper or a publishable research claim, think through the direction one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, months ahead, riskiest sub-problem, continue / kill / pivot), and how to read a rejection. Use when the user names credo-taste or asks whether a paper-bound research direction is worth it. Reasons in prose, no scores. NOT for tickets, bugs, product evaluations, routine execution of a settled task, for planning paper text (credo-paper-plan), for reading a paper (credo-read-then-forget), or for a direction decided inside an organization and the failure-mode pass on a new system (praxis-direction)."
+description: "For work aimed at a paper or a publishable research claim, think through the direction one question at a time: which problem is worth pursuing, whether to start or continue a project (best-case conclusion, one idea, months ahead, riskiest sub-problem, continue / kill / pivot), and how to read a rejection. Use when the user names credo-taste or asks whether a paper-bound research direction is worth it. Reasons in prose, no scores. NOT for tickets, bugs, product evaluations, routine execution of a settled task, for planning paper text (credo-paper-plan), for reading a paper (literature-research), or for a direction decided inside an organization and the failure-mode pass on a new system (praxis-direction)."
 disable-model-invocation: true
 ---
 

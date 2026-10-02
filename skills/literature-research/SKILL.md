@@ -1,22 +1,38 @@
 ---
 name: literature-research
 description: >
-  Investigate a research question and keep the sources in a simple local
-  research library. Use when the user explicitly asks for a literature search,
-  a research survey, or to collect research sources, or names literature-research;
-  otherwise only when a decision needs evidence from papers or technical
-  research posts. Save papers, posts, figures, and associated code under
-  research/ with a concise Markdown index; search saved material first. NOT for
-  general web lookups, product or vendor comparisons, brainstorming, transcript
-  capture, issue cleanup, or document restructuring, even when the request says
-  "investigate".
+  Read research papers for a purpose and investigate research questions,
+  keeping the sources in a simple local library. Use when a paper, preprint, or
+  PDF lands and the user asks what it does, whether to read it, or what to take
+  from it; when the user asks for a literature search, a research survey, or to
+  collect research sources, or names literature-research; otherwise only when
+  a decision needs evidence from papers or technical research posts. Reads one
+  paper in a declared mode (scan, extract, reproduce) and checks inherited
+  assumptions; saves papers, posts, figures, and code under research/ with a
+  concise Markdown index. NOT for general web lookups, product or vendor
+  comparisons, brainstorming, transcript capture, issue cleanup, or document
+  restructuring, even when the request says "investigate".
 ---
 
 # Literature Research
 
-Investigate questions. Preserve sources. Build on prior work. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
+Read papers for a purpose, investigate questions, preserve sources, and build on prior work. Keep ordinary files and a small Markdown index. The library must work with filesystem search alone: no database, embedding index, background service, mandatory citation manager, or custom application.
 
 It serves a near-term investigation as well as a paper and does not require a paper plan, journal entry, or research-direction interview.
+
+## Read one paper
+
+Pick the mode from the request; scan is the default.
+
+- **Scan:** two lines: the one new thing in your words, and whether it matters for the user's stated work. If the paper hides its one thing, say so; that is information about the paper. Do not paraphrase the abstract.
+- **Extract:** only the piece the user names, with what is needed to use it: the definition, the setup, the number with its unit and denominator, the proof step with its assumptions, and its location in the paper.
+- **Reproduce:** when the user intends to build on or refute the work: what redoing it would take, the stated and unstated assumptions, what is claimed but not shown, errors with their location, and the one missing experiment a skeptical reader would want.
+
+If the paper cannot be accessed, say so and stop; do not reconstruct it from the abstract or from memory.
+
+When the paper's framing could change the user's approach, add a short assumption check, adapted from the "Read all the papers" and "Ignore all the papers" sections of Carlini's [research essay](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html). Name the conventions it inherits from the field, such as the metric, threat model, baselines, dataset, or an early arbitrary choice, and mark those that look unjustified. Ask what the user would have done on their problem without reading it and whether the paper's pull is earned. Name the one question it makes the user want to shout about, if any; that is where their own problem may be. A narrow extraction needs no such check.
+
+A single read saves into an existing library or wherever the user asks; it does not start a library. Within an investigation, scan most sources, extract from the few that bear on the question, and reproduce only on request.
 
 ## Decide whether to investigate
 
@@ -73,6 +89,6 @@ After saving, update the existing row rather than adding a duplicate. Re-read th
 
 ## Deliver the answer
 
-Lead with the answer supported by the evidence. Distinguish source claims, your interpretation, and what remains unknown. Cite original sources and provide the local index path so the next session can retrieve the same material. Mention material collection gaps and reading limits; do not describe a partial snapshot as a complete archive. Source collection does not imply experiment execution or reproduction. Connect a consequential finding to the existing project question and next decision when relevant, without creating a separate tracking system. Use ml-experiment for a requested experiment, ml-dataset for data construction or review, and evaluation-design for measurement design; their methods do not need a literature survey when the inputs already suffice.
+Lead with the answer supported by the evidence. Distinguish source claims, your interpretation, and what remains unknown. Cite original sources and provide the local index path so the next session can retrieve the same material. Mention material collection gaps and reading limits; do not describe a partial snapshot as a complete archive. Source collection does not imply experiment execution or reproduction. Connect a consequential finding to the existing project question and next decision when relevant, without creating a separate tracking system. Use ml-research-methods for a requested experiment, dataset, or measurement design; it does not need a literature survey when the inputs already suffice.
 
 Finish when the question is answered to the requested depth, each retained work's expected materials are saved or have an explicit collection gap, and the index links have been checked. Any completeness statement applies only to that artifact set checked on that date, not the whole literature or all future versions. If source access or filesystem writes are unavailable, give the supported answer and state exactly what could not be read or saved.
