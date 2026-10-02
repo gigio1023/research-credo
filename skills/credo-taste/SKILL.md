@@ -10,9 +10,9 @@ Outcome: the user states, in their own words, what they will do and why, after b
 
 ## Scope
 
-Use only when both hold: the work is aimed at a paper or a publishable research claim, and the value of the direction is still uncertain. A ticket, a bug, a customer deadline, a product evaluation, or this week's task is not in scope, even when it involves a model, a benchmark, or the word research; do that work well with the method skills and move on. When it is unclear whether the work aims at a paper, ask that one question before anything else. For a direction decided inside an organization, where the result is a product or capability decision rather than a paper, use praxis-direction.
+Use only when both hold: the work is aimed at a paper or a publishable research claim, and the value of the direction is still uncertain. A ticket, a bug, a customer deadline, a product evaluation, or this week's task is not in scope, even when it involves a model, a benchmark, or the word research; do that work well with the work-track skills and move on. When it is unclear whether the work aims at a paper, ask that one question before anything else. For a direction decided inside an organization, where the result is a product or capability decision rather than a paper, use praxis-direction.
 
-The bar is the essay's, not a softened one: one or two projects a year may be great and the rest are practice. Do not lower a question to fit applied work; applied work belongs to the method skills. Do not reopen a settled question. Infer the decision from context and ask only for missing human judgment.
+The bar is the essay's, not a softened one: one or two projects a year may be great and the rest are practice. Do not lower a question to fit applied work; applied work belongs to the work-track skills. Do not reopen a settled question. Infer the decision from context and ask only for missing human judgment.
 
 ## How the conversation runs
 
@@ -32,6 +32,7 @@ Stop rules: stop when the user can say what they will do and why; stop after abo
 | Starting or continuing one project | Run the gate below. |
 | Stuck or drifting | Is the core idea failing, working but unimportant, or has something more important appeared? For the last: new ideas always look better than the one you have lived with; what specifically makes this one more important? What would you salvage if you killed it today? |
 | A new system, dataset, API, or agent appears | Hand off to praxis-direction, which owns the failure-mode pass and its fixed list. |
+| A work result might become a paper | Which one relationship does it isolate that prior work blurred, and would it hold outside this product on a setting a reviewer can rerun? What is the delta from the two or three closest papers? Run the literature-research prior-art check before answering. What can be released under the project's records, customer, and disclosure constraints? The product decision stays with the work; the paper is a separate artifact with its own bar. |
 | Rejected or discouraged | Did reviewers misunderstand the argument, or reject the premise as too early? Most of his awarded papers were rejected first. What in the writing would make a confused reviewer understand? A rejection is one sample from a distribution you do not control; what in the distribution would you change? |
 | Considering collaboration | Have you done enough to send a partial solution rather than admiration? Are you hiding the idea from people who could help, and why? Ideas are cheap; execution is hard. |
 | About to write | Hand off to credo-paper-plan. |

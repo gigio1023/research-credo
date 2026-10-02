@@ -2,11 +2,11 @@
 
 Guidance for work in this repository, and an optional source to adapt into a research project's instructions when the user requests setup. Installing skills alone does not activate every method or journal habit. Project preferences and records belong with the project, outside installed skill packages.
 
-The repository holds nine skills in three tracks with different readers. The four `credo-` skills form the paper track, adapted from Nicholas Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html); it answers to a reader and a venue. The method skills are ordinary research and ML practice for any task that needs them and carry their own source notes. The organization track answers to a decision a company must make with the compute, data, and experts it has.
+The repository holds eleven skills in three tracks with different readers. The four `credo-` skills form the paper track, adapted from Nicholas Carlini's [How to win a best paper award](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html); it answers to a reader and a venue. The work track serves the reader who decides whether to launch, ship, adopt a model, or tell a customer; its skills are split by the moment in the work (design, audit, operate) and carry their own source notes. The organization track answers to a decision a company must make with the compute, data, and experts it has.
 
 ## Paper track scope
 
-Apply `credo-taste`, `credo-paper-plan`, `credo-journal`, and `credo-release` only when the work is aimed at a paper or a publishable research claim. Within that scope the essay's bar holds unsoftened: one idea, a best-case conclusion that says more than a number went up, a result months ahead of the next person, and effort a reasonable person would not spend. A ticket, a bug, a customer deadline, a product evaluation, or this week's task is out of scope even when it involves a model, a benchmark, or the word research; do that work well with the method skills and move on. When it is unclear whether the work aims at a paper, ask that one question first.
+Apply `credo-taste`, `credo-paper-plan`, `credo-journal`, and `credo-release` only when the work is aimed at a paper or a publishable research claim. Within that scope the essay's bar holds unsoftened: one idea, a best-case conclusion that says more than a number went up, a result months ahead of the next person, and effort a reasonable person would not spend. A ticket, a bug, a customer deadline, a product evaluation, or this week's task is out of scope even when it involves a model, a benchmark, or the word research; do that work well with the work-track skills and move on. When it is unclear whether the work aims at a paper, ask that one question first.
 
 `credo-taste` and `credo-journal` run only on the user's request, because an unrequested run either interviews the user or writes to the user's journal. Harness adapters keep them out of automatic selection: `disable-model-invocation` in the Claude Code frontmatter and `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for Codex. Each body states the same scope for harnesses without those controls.
 
@@ -14,15 +14,30 @@ Apply `credo-taste`, `credo-paper-plan`, `credo-journal`, and `credo-release` on
 
 | Track | Work | Skill |
 | --- | --- | --- |
-| Paper | Choose, continue, pivot, or stop a paper-bound research direction, on request | `credo-taste` |
-| Paper | Plan or critique a paper's argument and figures | `credo-paper-plan` |
+| Paper | Choose, continue, pivot, or stop a paper-bound research direction, or judge whether a work result could become a paper, on request | `credo-taste` |
+| Paper | Plan or critique a paper's argument, or plan the response to peer reviews | `credo-paper-plan` |
 | Paper | Record research ideas, predictions, and hindsight, on request | `credo-journal` |
 | Paper | Check a paper before submission or release | `credo-release` |
-| Method | Read a paper for a purpose, survey literature, and preserve sources | `literature-research` |
-| Method | Design, run, or review an experiment, dataset, or evaluation benchmark | `ml-research-methods` |
-| Method | Operate an approved evaluation campaign across attempts and sessions | `evaluation-operations` |
+| Work | Read a paper, check prior art for a claim, survey open models or datasets, collect sources | `literature-research` |
+| Work | Design, run, or interpret a training, adaptation, serving, or reproduction experiment and its training data | `ml-experiment` |
+| Work | Design or change what an eval measures, its cases, labels, checks, and judges | `evaluation-design` |
+| Work | Give a launch, hold, or report verdict on a built eval, judge, harness, scoring change, or result | `evaluation-audit` |
+| Work | Operate an approved evaluation campaign across attempts and sessions | `evaluation-operations` |
 | Organization | Turn an agenda into a resourced bet, run the failure-mode pass, or set up the praxis profile, on request | `praxis-direction` |
 | Organization | Reconstruct work context from authorized internal sources | `internal-source-research` |
+
+Each common request has one owner, so a benchmark build or a readiness check loads one skill:
+
+| Request | Owner |
+| --- | --- |
+| Design or redesign an eval, its cases, or its judge; validate a judge against new labels | `evaluation-design` |
+| Is this eval, harness, judge, or scoring change ready; can this result be trusted or shown to a customer | `evaluation-audit` |
+| Run, resume, monitor, or diagnose an approved campaign | `evaluation-operations` |
+| Adapt or train a model; compare serving configurations before a full run | `ml-experiment` |
+| Which open models or datasets exist; has this claim been done before | `literature-research` |
+| Could this work result become a paper | `credo-taste` |
+
+The design skill never declares its own instrument ready; the audit reads the artifacts, not the design's claims. Harness feature work, eval framework choice, infrastructure, and incidents are outside the pack.
 
 Use existing decisions and evidence before asking another question. A user chooses purpose, tradeoffs, and authority; an empirical unknown may require an experiment. A finding, rejected hypothesis, unsuitable dataset, or unresolved comparison can be a useful result without a code change.
 
@@ -30,7 +45,7 @@ Inside an organization, where the result is a product, customer, or capability d
 
 ## Work and continuity
 
-State the question and the decision the work could change. Select a credible comparison and assessment appropriate to that question. Novelty, months ahead, and publication claims belong to the paper track; method work does not borrow them. Preserve actual results, relevant conditions, and interpretation in existing project records. Give the reader the explanation needed for this decision without reciting every possible qualification.
+State the question and the decision the work could change. Select a credible comparison and assessment appropriate to that question. Novelty, months ahead, and publication claims belong to the paper track; work-track skills do not borrow them. A work result that might become a paper is a separate decision for `credo-taste`. Preserve actual results, relevant conditions, and interpretation in existing project records. Give the reader the explanation needed for this decision without reciting every possible qualification.
 
 Quick checks within the same question and authorized resources can proceed. Ask before a new direction, a run that spends beyond the always-on tier or the stated budget, or a newly proposed long activity, unless that work is already authorized. Short duration does not grant new spending, data access, or external actions. Honor an existing resource budget and stop condition.
 

@@ -1,19 +1,13 @@
 ---
 name: praxis-direction
 description: >
-  Turn an organization's research agenda into one concrete, resourced bet, and
-  set up or audit the one-page praxis profile the bet draws on. Use when the
-  user asks to turn an agenda ("improve X capability", "we should work on Y")
-  into a bet, asks whether a new system, dataset, or agent holds anything worth
-  a bet, asks to set up praxis for a company or workspace, or names
-  praxis-direction. The bet names the outcome served, the capability's measure
-  with current and target numbers, the intervention, the cheapest
-  discriminating test, a compute ladder with a spend gate, and the in-house
-  expert and data; it ends as a Goal block for the project's plan. NOT for
-  ordinary task planning, a ticket, work whose bet is already set, a new
-  release mentioned in passing, paper-direction decisions (credo-taste),
-  running experiments (ml-research-methods), project plans (gigio-write-plan),
-  or general project context (gigio-project-setup).
+  Turn an organization's research agenda into one resourced bet (outcome,
+  measure, intervention, cheapest test, compute ladder, kill condition), run
+  the failure-mode pass on a new system, or set up the praxis profile the bet
+  draws on. Use when the user asks for a bet, asks whether a new system or
+  dataset holds one, asks to set up praxis, or names praxis-direction. NOT for
+  task planning, a ticket, settled work, paper direction (credo-taste), or
+  experiments (ml-experiment).
 ---
 
 # Praxis: Direction
