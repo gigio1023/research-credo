@@ -4,8 +4,9 @@ description: >
   Operate, resume, monitor, or reconstruct the evidence-backed state of a
   multi-run evaluation campaign. Use when approved evaluation work spans runs
   or sessions and its live progress, durable attempts, priorities, or results
-  must stay accurate. NOT for evaluation-method design, dataset building,
-  generic code review, or a one-off evaluation run.
+  must stay accurate. NOT for designing what an evaluation measures or its
+  cases (evaluation-design), a verdict on a built eval or its result
+  (evaluation-audit), generic code review, or a one-off evaluation run.
 ---
 
 # Evaluation Operations
@@ -44,6 +45,8 @@ Keep these facts distinct even if a local project displays them under one status
 They can overlap or pipeline and do not require a new shared enum. A launch being accepted, queued, or prepared is not completed inference. A completed inference is not necessarily scored. A score is not necessarily validated or comparable. Treat a null, missing, or unreadable value as unknown unless the project's own contract says otherwise; it is never zero by default.
 
 Use the project's deterministic checks where available, and describe precisely which fact each check establishes. Do not call a static source inspection, a hypothetical command, or a fixture-backed local check a real execution result.
+
+For a campaign whose cases try to elicit unwanted behavior, read [adversarial runs](references/adversarial-runs.md) for its denominators, outcome classes, baseline pass, and replay records.
 
 ## Preserve identity, attempts, and result lineage
 

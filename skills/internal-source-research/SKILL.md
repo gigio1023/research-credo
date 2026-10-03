@@ -4,7 +4,7 @@ description: >
   Reconstruct a scoped internal work context from authorized, read-only Notion,
   Slack, GitHub, Linear, or comparable sources. Use when a user needs a
   defensible view of workstreams, decisions, chronology, contradictions, or
-  next work—not a single connector lookup or a report-formatting task.
+  next work. NOT for a single connector lookup or a report-formatting task.
 ---
 
 # Internal Source Research
@@ -55,7 +55,7 @@ For a broad research request, use bounded native delegation when independent sou
 
 The lead owns the research frame, scope changes, contradiction resolution, recommendations, and final synthesis. Assign a worker either a source slice or a topic slice, not a duplicated full search. Give it an explicit owner, scope, time boundary, and stopping point. A worker returns a compact evidence packet: exact citations, artifact dates, searched scope, key distinctions, unread material or failures, and any proposed follow-up. It must not relay raw private corpora or start nested fan-out.
 
-Reuse collected readers and evidence before starting targeted follow-ups. Select lower-cost capable collectors for independent collection—breadth mapping and, where adequate, complete decisive reads within their slice—only when the configured runtime policy permits it; reserve difficult cross-source reading and synthesis for the capable current lead. Read [harness-model-routing.md](references/harness-model-routing.md) only when choosing a model, effort, provider, or delegation route.
+Reuse collected readers and evidence before starting targeted follow-ups. When the configured runtime policy permits it, select lower-cost capable collectors for independent collection: breadth mapping and, where adequate, complete decisive reads within their slice; reserve difficult cross-source reading and synthesis for the capable current lead. Read [harness-model-routing.md](references/harness-model-routing.md) only when choosing a model, effort, provider, or delegation route.
 
 ## Stop honestly
 

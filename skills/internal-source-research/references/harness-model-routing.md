@@ -8,12 +8,9 @@ Use only models, efforts, providers, connectors, and delegation mechanisms that 
 
 Do not silently substitute an explicitly required unavailable model, effort, or provider. Report that it is unavailable and request direction if the requirement is material. Do not move sensitive source content to a new provider, alter permanent settings, install or reconfigure a connector, or invent a native command solely to make a route work.
 
-## Illustrative preferences, not product claims
+## Model choice
 
-The following are preferred configured routes supplied with this package. They are not evergreen statements about model availability, capability, or price. A user requirement, source-handling restriction, or active harness policy takes precedence. When a model routing skill such as `fable5-model-routing` or `gpt6-astra-model-routing` is loaded, it owns the exact model and effort for each subagent.
-
-- In a configured Claude Code environment, route independent broad source collection to Sonnet 5 at effort `xhigh`.
-- In a configured Codex environment, route a bounded research slice to GPT-6 Sol (`gpt-6-sol`) at effort `xhigh` when both the model identifier and effort are shown as allowed; selecting it requires Codex CLI 0.156.1 or later. This identifier is a preferred configured route, not a portable CLI setting or a guarantee for another surface.
+A loaded model routing skill, such as `fable5-model-routing` or `gpt6-astra-model-routing`, owns the exact model and effort for each subagent. Without one, choose from what the active harness exposes and permits. This reference names no model, because availability, identifiers, and prices change faster than the package; a user requirement, source-handling restriction, or harness policy takes precedence over any route.
 
 Keep a capable current lead on the research frame, difficult evidence reading, contradiction resolution, and final synthesis. Use a lower-cost capable reader only for independent collection, including complete decisive reads within its bounded slice, where its limitations will not decide the result. Reconsider the route when sensitive content, access asymmetry, cost, latency, or a difficult ambiguity changes the tradeoff.
 

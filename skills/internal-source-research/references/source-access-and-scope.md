@@ -4,7 +4,7 @@ Use this reference when deciding which sources to inspect, checking an access fa
 
 ## Start from a narrow evidence plan
 
-Write down the question, relevant containers or objects, workstreams, time boundary, and the reason each service might answer it. A source becomes eligible because it is in the user's scope or can answer the bounded question—not merely because its connector is visible.
+Write down the question, relevant containers or objects, workstreams, time boundary, and the reason each service might answer it. A source becomes eligible because it is in the user's scope or can answer the bounded question, not merely because its connector is visible.
 
 Start with named anchors and nearby context. Do not make a workspace-wide export, broad repository harvest, direct-message sweep, or search across unrelated teams by default. A source document may point to another object, but that only justifies a follow-up when it remains within the approved frame.
 

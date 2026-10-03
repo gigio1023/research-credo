@@ -1,6 +1,7 @@
 ---
 name: credo-journal
-description: "Keep the record that trains research taste and run the monthly review on it: append ideas (problems worth solving), predictions made at decisions, hindsight when outcomes arrive, and a monthly review of the long-horizon portfolio (which one or two efforts could be great, what dies, months-ahead guesses). Use when the user requests recording or reviewing meaningful ideas, predictions, or hindsight, or an explicit project journal policy covers that work. Append-only through the bundled script. NOT for routine task tracking, meeting notes, or automatic entries for every run."
+description: "Keep the record that trains research taste and run the monthly review on it: append ideas (problems worth solving), predictions made at decisions, hindsight when outcomes arrive, and a monthly review of the long-horizon portfolio (which one or two efforts could be great, what dies, months-ahead guesses). Use when the user names credo-journal or asks to record or review research ideas, predictions, or hindsight, or an explicit project journal policy covers that work. Append-only through the bundled script. NOT for routine task tracking, product work, meeting notes, or automatic entries for every run."
+disable-model-invocation: true
 ---
 
 # Credo: Journal
@@ -11,7 +12,7 @@ The habit extends Carlini's [ideas.txt](https://nicholas.carlini.com/writing/202
 
 ## Scope
 
-Record meaningful research ideas, direction decisions, and hindsight when the user requests it or the project has an explicit journal-maintenance policy. Significance, not a minimum number of months, determines relevance. Routine task progress and every individual run stay in their existing records.
+Record research ideas, predictions made at decisions about paper-bound work, and hindsight when the user asks or the project has an explicit journal policy. The journal tracks the long-horizon portfolio the monthly review reads; routine task progress, product work, and individual runs stay in their existing records.
 
 ## Locate the journal
 
