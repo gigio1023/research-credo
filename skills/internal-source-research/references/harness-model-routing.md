@@ -10,9 +10,11 @@ Do not silently substitute an explicitly required unavailable model, effort, or 
 
 ## Model choice
 
-A loaded model routing skill, such as `fable5-model-routing` or `gpt6-astra-model-routing`, owns the exact model and effort for each subagent. Without one, choose from what the active harness exposes and permits. This reference names no model, because availability, identifiers, and prices change faster than the package; a user requirement, source-handling restriction, or harness policy takes precedence over any route.
+A model routing skill owns the exact model and effort for each subagent. Apply `gpt6-astra-model-routing` to GPT workers, including under a lead from another model family, and the relevant routing skill to other workers. Reuse an applicable policy already loaded. If that policy is unavailable, keep judgment with the current authorized lead rather than inventing a lower-cost route. User requirements, source-handling restrictions, and harness policy still govern available routes.
 
-Keep a capable current lead on the research frame, difficult evidence reading, contradiction resolution, and final synthesis. Use a lower-cost capable reader only for independent collection, including complete decisive reads within its bounded slice, where its limitations will not decide the result. Reconsider the route when sensitive content, access asymmetry, cost, latency, or a difficult ambiguity changes the tradeoff.
+Classify the actual work before routing. Source selection, relevance decisions, summaries, critical reading, contradiction resolution, diagnosis, and recommendations all require judgment. A bounded slice, large batch, or read-only operation does not make that work mechanical. Keep these tasks on the routing policy's judgment route.
+
+Use a mechanical route only when inputs, operations, outputs, and checks are fixed beforehand. Examples include fetching specified objects, collecting the results of supplied queries, deduplicating by an exact key, or applying an approved transformation. Specify checks such as item counts, hashes, schema validation, or comparison with the original. Return exceptions to the judgment owner; the collector cannot decide which sources matter, summarize their meaning, choose a recovery, or propose the next query. Reconsider any route when sensitive content, access asymmetry, or task requirements change.
 
 ## Delegate within a bounded budget and authority
 
@@ -20,7 +22,7 @@ For broad in-scope research, use the runtime's documented native delegation rout
 
 Do not use nested fan-out, fixed worker counts, or an uncapped collection or cost-spending plan. Bound each subagent task by its question, source slice, and stopping condition. Reuse successful readers and send targeted follow-ups before starting another subagent. If no authorized delegation mechanism is available, complete the same evidence plan sequentially.
 
-Workers return citations, dates, searched scope, material findings, access or retrieval failures, unread boundaries, and a small proposed follow-up. They do not make external changes, relay a raw private corpus, or make final cross-source judgments outside their slice. The lead records what coverage each route actually achieved.
+Mechanical collectors return the declared outputs, source locators, dates, searched scope, check results, access or retrieval failures, and unread boundaries. Readers on a judgment route can additionally return findings and proposed follow-ups within their slice. Neither route authorizes external changes or raw private corpus relays. The lead records achieved coverage and owns final cross-source judgments.
 
 ## Route failure is evidence, not a reason to overreach
 
