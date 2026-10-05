@@ -35,9 +35,11 @@ Paraphrased from Nicholas Carlini's writing, mainly [How to win a best paper awa
 
 ## Writing
 
+T11 adapts the source's demand for specificity to quantitative, theoretical, and qualitative contributions. The package calibrates claim strength to evidence instead of requiring a number or removing every qualification. Introduction length follows venue constraints and the explanation the argument needs; the source itself describes a three-page introduction that bridges disciplines.
+
 | # | Tenet | Source |
 | --- | --- | --- |
-| T11 | Write for one reader; the default is yourself six months ago. The abstract carries at least one specific number and no hedging. The introduction is a story that starts where the reader stands and reaches your contribution in at most two pages; when the claim is heretical, lay out the evidence and let the reader arrive at it. | Know your reader; Your abstract does matter; Write a good introduction |
+| T11 | Write for one reader; the default is yourself six months ago. The abstract states a concrete contribution and established result at the strength its evidence supports. Use material quantitative results when applicable; preserve assumptions and uncertainty that change the claim. The introduction connects the reader's starting point to the contribution. About two pages is a working target when the venue and argument allow; retain necessary mechanism and evidence. When the claim is heretical, lay out the evidence and let the reader arrive at it. | Know your reader; Your abstract does matter; Write a good introduction; package adaptation above |
 | T12 | Each figure must be understood from its caption alone. The conclusion is not the abstract in the past tense; it answers "so what". Write the best-case conclusion before doing the research, and drop the project if that conclusion says nothing beyond repeating results. | Each figure must stand on its own; Write a good conclusion |
 | T13 | Read the draft aloud or through text-to-speech and fix what does not land. Being not-bad at prose is enough. Timebox the writing; proofreading has diminishing returns. | On Writing; [Latent Space interview](https://www.latent.space/p/carlini) around 00:07 on timeboxing |
 

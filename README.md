@@ -13,6 +13,8 @@ Only for work aimed at a paper or a publishable research claim, at the essay's b
 | [credo-journal](skills/credo-journal/SKILL.md) | Record research ideas, predictions, and hindsight |
 | [credo-release](skills/credo-release/SKILL.md) | Check a paper before submission or release |
 
+Paper claims need evidence appropriate to their type. Abstracts state specific quantitative, theoretical, or qualitative contributions and preserve the assumptions and uncertainty that affect their meaning.
+
 ## Work track
 
 Everyday research and evaluation work, meant to be selected in ordinary tasks, so it carries no `credo-` prefix. The three evaluation skills split by moment: design builds the instrument, audit decides whether it or its result can be trusted, and operations runs an approved campaign. The design skill never declares its own instrument ready.
@@ -44,6 +46,8 @@ Adversarial evaluation lives in references inside the evaluation skills rather t
 | [internal-source-research](skills/internal-source-research/SKILL.md) | Reconstruct work context from authorized internal sources |
 
 The organization track runs when someone asks for it. Its skills are public and generic; what only the organization knows lives in a one-page `praxis-profile.md` in the organization's own workspace, written and read by praxis-direction. The [template](skills/praxis-direction/references/profile-template.md) shows the fields with a synthetic example. Nothing from a real organization belongs in this repository.
+
+Internal research distinguishes mechanical retrieval from source selection, critical reading, and synthesis. The active routing policy owns model and effort choices. Delegation preserves the task's source, provider, and external-action boundaries.
 
 ## Install
 
