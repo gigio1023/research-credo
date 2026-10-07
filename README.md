@@ -36,6 +36,8 @@ Everyday research and evaluation work, meant to be selected in ordinary tasks, s
 | Which open models or datasets exist; has this claim been done before | `literature-research` |
 | Could this work result become a paper | `credo-taste` |
 
+`literature-research` keeps fetching, hashing, and file checks apart from source selection, triage, reading, and prior-art judgment when it delegates.
+
 Adversarial evaluation lives in references inside the evaluation skills rather than in a skill of its own, because for evaluation teams it is the domain of most evals, not a separate moment. Harness feature work, eval framework choice, infrastructure, and incidents are outside the pack.
 
 ## Organization track

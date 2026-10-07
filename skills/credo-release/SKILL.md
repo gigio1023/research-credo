@@ -1,11 +1,13 @@
 ---
 name: credo-release
-description: "Check a LaTeX paper before submission, camera-ready, or arXiv release: run bundled source checks, inspect the rendered artifact and current venue requirements, and ask for author-only attestations. Use for final checks or linting TeX. NOT for argument planning (credo-paper-plan), automatic paper rewriting, or submission without authorization."
+description: "Check a LaTeX paper before submission, camera-ready, or arXiv release: run bundled source checks, inspect the rendered artifact and current venue requirements, and ask for author-only attestations. Use for final checks or linting TeX. NOT for argument planning (credo-paper-plan), a LaTeX report or result bound for a customer or other external reader (evaluation-audit release mode), automatic paper rewriting, or submission without authorization."
 ---
 
 # Credo: Release
 
 Return a release review with evidence for checked items and the remaining author decisions. Adapted from Carlini's [Research Paper Release Checklist](https://nicholas.carlini.com/writing/2022/paper-release-checklist.html); see [coverage](references/coverage.md) for the bundled script's limits.
+
+Scope: a paper or preprint headed to a venue or arXiv. A customer, technical, or evaluation report typeset in LaTeX goes to evaluation-audit release mode, which decides whether its results can be shown; the source scanner below can still lint that report's TeX when asked.
 
 ## Source checks
 

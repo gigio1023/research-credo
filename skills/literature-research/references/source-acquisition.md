@@ -1,21 +1,22 @@
 # Source Acquisition
 
-Use the tools already available in the current environment. The library contract is independent of a particular downloader. These methods were checked on 2026-09-23; inspect current help or source documentation when a command differs.
+Use the tools already available in the current environment. The library contract is independent of a particular downloader. These methods were checked on 2026-10-07; inspect current help or source documentation when a command differs.
 
 ## Discover and read with Hugging Face
 
-The locally inspected HF CLI v1.32.0 exposes these commands:
+The locally inspected HF CLI v2.1.1 exposes these commands:
 
 ```bash
 hf papers --help
 hf papers search "research topic" --limit 10 --format json
 hf papers info 1706.03762 --format json
 hf papers read 1706.03762
+hf papers list --date today --limit 20 --format json
 ```
 
-The number is an illustrative discovery batch, not a collection quota. `info` takes a base arXiv identifier and returns HF metadata. The inspected CLI has no paper download or version-pinning command; the tested version-suffixed identifier was not found. Generated fields such as `ai_summary` and `ai_keywords` are discovery aids, not paper-author claims. Verify bibliographic details, versions, and artifact URLs at the original source. `read` returns a Markdown rendering from HF; save it as a labeled derivative if useful, then obtain available originals separately. A successful `read` is not evidence that a PDF, LaTeX archive, or figures were saved.
+The number is an illustrative discovery batch, not a collection quota. `info` takes a base arXiv identifier and returns HF metadata. `list` (alias `ls`) returns the HF daily-papers feed for a date, week, or month; it is a curated feed of submitted papers, not a search. `--json` is shorthand for `--format json`. The inspected CLI has no paper download or version-pinning command; the tested version-suffixed identifier was not found. Generated fields such as `ai_summary` and `ai_keywords` are discovery aids, not paper-author claims. Verify bibliographic details, versions, and artifact URLs at the original source. `read` returns a Markdown rendering from HF; save it as a labeled derivative if useful, then obtain available originals separately. A successful `read` is not evidence that a PDF, LaTeX archive, or figures were saved.
 
-HF is useful for AI papers; it does not replace a web search over proceedings, journals, author sites, and research posts. If `hf papers` is unavailable, continue through available web tools rather than blocking on installation. Sources: [HF CLI guide](https://huggingface.co/docs/huggingface_hub/en/guides/cli#hf-papers) and [v1.32.0 implementation](https://github.com/huggingface/huggingface_hub/blob/v1.32.0/src/huggingface_hub/cli/papers.py).
+HF is useful for AI papers; it does not replace a web search over proceedings, journals, author sites, and research posts. If `hf papers` is unavailable, continue through available web tools rather than blocking on installation. Sources: [HF CLI guide](https://huggingface.co/docs/huggingface_hub/en/guides/cli#hf-papers) and [v2.1.1 implementation](https://github.com/huggingface/huggingface_hub/blob/v2.1.1/src/huggingface_hub/cli/papers.py).
 
 ## Papers and supplements
 

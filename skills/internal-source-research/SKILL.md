@@ -57,7 +57,7 @@ The lead owns the research frame, scope changes, contradiction resolution, recom
 
 A mechanical collector executes supplied queries, fetches named objects, or applies fixed transformations. Its packet defines inputs, operations, output fields, and checks in advance. It returns source locators, dates, requested source output, execution results, and unread or failed items. It returns exceptions to the lead without selecting new queries, interpreting evidence, or recommending next work. A research reader may return findings, distinctions, and proposed follow-ups only when the route authorizes judgment. Both packets minimize private content and prohibit raw corpus relays or nested fan-out.
 
-Reuse successful readers and evidence before starting targeted follow-ups. Model and effort choices belong to the active routing policy, not to a research skill's cost preference. Read [harness-model-routing.md](references/harness-model-routing.md) when choosing a model, effort, provider, or delegation route.
+Settle scope questions with the user before dispatch. Once the split is known, give every ready, independent slice its own worker up to the harness limit and the user's budget, and start queued slices as workers finish; fewer workers only serialize independent work. Reuse a reader for a follow-up only when it already holds the context that follow-up needs, and reuse collected evidence instead of searching again. Model and effort choices belong to the active routing policy, not to a research skill's cost preference. Read [harness-model-routing.md](references/harness-model-routing.md) when choosing a model, effort, provider, or delegation route.
 
 ## Stop honestly
 
