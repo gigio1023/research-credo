@@ -12,7 +12,7 @@ Copy the field headings and fill the values for your organization. Keep the file
 | In-house assets | Expert roles and how to reach them; internal datasets with size, supported use, and access rules | 5 |
 | Horizon and kill rule | Default weeks per bet, review checkpoint, default kill condition | 6 |
 | Records | Where a Goal block goes (plan format), where predictions and hindsight are kept | closing |
-| Stances | Tenets from credo-taste the organization holds differently | all |
+| Stances | Research stances the organization holds differently, stated in words; add the credo-taste tenet number only when that package is installed | all |
 
 Question 3, the intervention and the question it answers, has no field: that reasoning does not depend on the organization.
 
@@ -47,6 +47,6 @@ Question 3, the intervention and the question it answers, has no field: that rea
 - Goal blocks go to `.plans/<name>.md`; predictions and hindsight are appended to the same plan.
 
 ## Stances
-- T8, five projects in flight: not held; one bet at a time.
-- T9, unreasonable effort: held only within the tier already approved.
+- Run several projects and expect to finish about one in five (credo-taste T8): not held; one bet at a time.
+- Go to lengths a reasonable person would not (credo-taste T9): held only within the tier already approved.
 ````

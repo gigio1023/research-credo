@@ -10,7 +10,7 @@ The experiment, training-data, and interpretation methods were reviewed Septembe
 
 ## Interpretation and rival explanations
 
-- [K-Dense scientific-agent-skills, hypothesis-generation](https://github.com/K-Dense-AI/scientific-agent-skills/tree/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/peer-review): inspected the SKILL.md at revision `1549884` (2026-10-01), section "Generate rivals before choosing tests". Adopted the practice of generating rival explanations from genuinely different classes (measurement artifact, confound, selection, reverse causation) and preferring tests where rivals predict different outcomes. The skill's biomedical preregistration machinery, templates, and scripts are not adopted.
+- [K-Dense scientific-agent-skills, hypothesis-generation](https://github.com/K-Dense-AI/scientific-agent-skills/tree/154988403bb5a18e9d3c0ce4e6d5e2e4b184a298/skills/hypothesis-generation): inspected the SKILL.md at revision `1549884` (2026-10-01), section "Generate rivals before choosing tests". Adopted the practice of generating rival explanations from genuinely different classes (measurement artifact, confound, selection, reverse causation) and preferring tests where rivals predict different outcomes. The skill's biomedical preregistration machinery, templates, and scripts are not adopted.
 
 ## Model adaptation
 

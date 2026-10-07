@@ -33,7 +33,7 @@ python3 scripts/journal.py append --kind hindsight --title "Project (prediction 
 python3 scripts/journal.py read --older-than 90
 ```
 
-Add `--path <file>` when the journal is not at the default location. The script opens the file in append mode only, stamps today's date, and refuses unknown kinds; it needs Python 3.10 or newer and no packages. If Python is unavailable, append by hand in the same shape (`## YYYY-MM-DD kind: title` followed by `- field: value` lines) and say so.
+Add `--path <file>` when the journal is not at the default location; without it the script uses the `CREDO_JOURNAL` environment variable when set, else `~/research/journal.md`. The script opens the file in append mode only, stamps today's date, and refuses unknown kinds; it needs Python 3.10 or newer and no packages. If Python is unavailable, append by hand in the same shape (`## YYYY-MM-DD kind: title` followed by `- field: value` lines) and say so.
 
 ## Rules that change behavior
 

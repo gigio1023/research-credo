@@ -131,7 +131,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"usage error: {log} is not a file", file=sys.stderr)
             return 2
         findings.extend(scan_log(log))
-    print(f"info\t{root}\ttitle: {title or '(no \\title found)'}")
+    # A backslash inside an f-string expression needs Python 3.12; keep it outside.
+    shown_title = title or "(no \\title found)"
+    print(f"info\t{root}\ttitle: {shown_title}")
     if abstract:
         macros = re.findall(r"\\[A-Za-z]+", abstract)
         sev = "warning" if macros else "info"

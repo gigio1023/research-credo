@@ -5,7 +5,7 @@ description: "Plan or critique a research paper's argument: the idea, reader, cl
 
 # Paper Plan
 
-Produce an argument the author can draft from, or critique a draft against its intended argument. Adapted from the writing sections of Carlini's research essay; background episodes live in the credo-taste package. Read an episode only when using it.
+Produce an argument the author can draft from, or critique a draft against its intended argument. Adapted from the writing sections of Carlini's research essay; background episodes come from the credo-taste package when it is installed. Read an episode only when using it; the plan does not depend on them.
 
 Scope: a paper, or a section of one, whose argument the author will defend to reviewers, at any distance from its deadline. A report, design document, or product write-up is a document task for the writing skill, not a paper plan.
 

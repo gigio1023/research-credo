@@ -8,7 +8,7 @@ Inspect actual model and tokenizer revisions, the data transform and split, obje
 
 A small authorized run can reveal invalid batches, non-finite loss, absent gradients, or an evaluation path that reads the wrong checkpoint. Overfitting a tiny sample can be a diagnostic when appropriate; it is not a universal requirement or a model-quality result.
 
-Estimate duration and resource demand from representative throughput when available. State the uncertainty that changes whether to launch. A multi-day run or material expansion needs confirmation unless already covered by the grant.
+Estimate duration and resource demand from representative throughput when available. State the uncertainty that changes whether to launch. A run that spends beyond the always-on tier or the stated budget, or a material expansion, needs the presentation in SKILL.md unless already authorized; duration alone does not decide.
 
 ## Preserve and recover
 

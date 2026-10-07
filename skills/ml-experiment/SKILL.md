@@ -62,7 +62,7 @@ Inspect actual outputs, comparison conditions, and errors. Separate measured obs
 - selection: the result was chosen on validation outcomes, or the cases favour the candidate.
 - reverse causation: the outcome shaped the training or selection, rather than the change producing the outcome.
 
-This rival-class framing is adapted from K-Dense hypothesis-generation (see references/sources.md). Prefer a check where the rival and the intended explanation predict meaningfully different outcomes. Repetition and uncertainty estimates should answer a real decision question at the actual independent unit, not satisfy a fixed seed-count ritual. An inconclusive difference is not equivalence.
+This rival-class framing is adapted from K-Dense hypothesis-generation (see [sources](references/sources.md)). Prefer a check where the rival and the intended explanation predict meaningfully different outcomes. Repetition and uncertainty estimates should answer a real decision question at the actual independent unit, not satisfy a fixed seed-count ritual. An inconclusive difference is not equivalence.
 
 Report the result at its supported strength with the conditions that matter to the reader, and keep full configuration and provenance in the project records. Do not hide a consequential failure to make a conclusion more favourable. Record what changed in the project's understanding, where the decisive result lives, and the next action or proposed test. Broader direction changes remain the user's decision.
 
